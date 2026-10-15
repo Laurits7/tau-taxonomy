@@ -8,7 +8,7 @@ Source bibliography: `tau_reco_merged.bib` (199 entries, copied from `~/Download
 ## Quick start
 
 ```bash
-cd ~/Projects/paper_analyzer
+git clone git@github.com:Laurits7/tau-taxonomy.git && cd tau-taxonomy
 ./tau_taxonomy
 ```
 
