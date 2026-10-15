@@ -1,0 +1,4 @@
+__pycache__/
+# generated: ./tau_taxonomy build [--zotero-bib tau_reco_zotero.bib]
+taxonomy.html
+tau_reco_zotero.bib

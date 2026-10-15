@@ -1,0 +1,245 @@
+# Hand classification of tau_reco_merged.bib
+#
+# Format:   bibkey | experiments | collision | topics
+#   - experiments, topics: comma-separated codes (see build.py: EXPERIMENTS / TOPICS)
+#   - collision: ee | had (pp / ppbar) | ep | mumu | nu | none (not tied to a collider)
+#   - "General" = experiment-agnostic (theory, generic ML studies, MC tools, reviews)
+# Entries in the .bib that are missing here show up as "Unclassified" in the viewer.
+#
+# Topic codes
+#   Tau performance : reco id calib trig dm boost fake
+#   Methods & tools : ml jettag mass mc det
+#   Physics analyses: sm higgs bsm pol prop bphys nu
+#   Theory          : theory
+#   Context         : review history prospects
+
+# ---------------- ATLAS ----------------
+Lai:2008rt                 | ATLAS          | had  | reco, id
+Gosdzik:2010bj             | ATLAS          | had  | reco, id
+Lai:2011sc                 | ATLAS          | had  | id
+Friedrich:2012xr           | ATLAS          | had  | reco, id
+Zinonos:2014rma            | ATLAS          | had  | reco, id
+Sakurai:2014kha            | ATLAS          | had  | trig
+ATLAS:2014rzk              | ATLAS          | had  | id, calib
+ATLAS:2015boj              | ATLAS          | had  | reco, dm
+Besjes:2016vhy             | ATLAS          | had  | trig
+Ordek:2019vrf              | ATLAS          | had  | trig
+ATLAS:2020azv              | ATLAS          | had  | boost, reco, id, higgs
+ATLAS:2024vdo              | ATLAS          | had  | det
+ATLAS:2024lbg              | ATLAS          | had  | boost, reco, id
+ATLAS:2024jgt              | ATLAS          | had  | boost, reco
+ATLAS:2026utg              | ATLAS          | had  | higgs, boost
+Richter-Was:2004hwa        | ATLAS          | had  | reco, id
+Heldmann:2005zda           | ATLAS          | had  | id
+Oye:2006gea                | ATLAS          | had  | reco, bsm
+ATLAS:2009xfe              | ATLAS          | had  | reco, id
+ATLAS:2009yiv              | ATLAS          | had  | trig
+ATLAS:2010kdq              | ATLAS          | had  | id
+ATLAS:2010maa              | ATLAS          | had  | trig
+ATLAS:2010tba              | ATLAS          | had  | reco, id
+ATLAS:2010pba              | ATLAS          | had  | trig
+ATLAS:2011tfa              | ATLAS          | had  | reco, id, calib
+ATLAS:2011zia              | ATLAS          | had  | id, sm
+ATLAS:2011oka              | ATLAS          | had  | reco, id
+ATLAS:2012voa              | ATLAS          | had  | reco, id
+ATLAS:2013uma              | ATLAS          | had  | trig
+ATLAS:2013qgs              | ATLAS          | had  | id
+ATLAS:2015xbi              | ATLAS          | had  | reco, id, calib
+ATLAS:2017mpa              | ATLAS          | had  | reco, id
+ATLAS:2017hlo              | ATLAS          | had  | trig
+ATLAS:2019uhp              | ATLAS          | had  | id, ml
+ATLAS:2019tjd              | ATLAS          | had  | fake
+ATLAS:2020iwm              | ATLAS          | had  | boost, reco, id, higgs
+ATLAS:2022aip              | ATLAS          | had  | reco, id, calib, ml
+ATLAS:2026bwj              | ATLAS          | had  | reco, id
+ATLAS:2017xuc              | ATLAS          | had  | pol, sm
+ATLAS:2022akr              | ATLAS          | had  | pol, higgs
+ATLAS:2011ohj              | ATLAS          | had  | sm
+ATLAS:2011pse              | ATLAS          | had  | sm
+ATLAS:2015xst              | ATLAS          | had  | higgs
+ATLAS:2018ynr              | ATLAS          | had  | higgs
+ATLAS:2020zms              | ATLAS          | had  | higgs, bsm
+ATLAS:2018gfm              | ATLAS          | had  | higgs, bsm
+ATLAS:2019gti              | ATLAS          | had  | bsm
+ATLAS:2025dkv              | ATLAS          | had  | jettag, ml
+ATLAS:2017tdaqTDR          | ATLAS          | had  | det, trig
+ATLAS:2020hgtdTDR          | ATLAS          | had  | det
+ATLAS:2026jar              | ATLAS          | had  | higgs
+
+# ---------------- ATLAS + CMS ----------------
+Flechl:2017bse             | ATLAS, CMS     | had  | id, calib, review
+ATLAS:2016neq              | ATLAS, CMS     | had  | higgs
+
+# ---------------- CMS ----------------
+CMS:2011eio                | CMS            | had  | reco, id
+Nayak:2012uaq              | CMS            | had  | reco, review
+CMS:2015pac                | CMS            | had  | reco, id, dm
+CMS:2018jrd                | CMS            | had  | reco, id, calib
+Bhattacharya:2019clk       | CMS            | had  | reco, boost
+Choudhury:2021vqb          | CMS            | had  | id, ml
+CMS:2022prd                | CMS            | had  | id, ml
+Motta:2024sqf              | CMS            | had  | trig, ml
+CMS:2025kgf                | CMS            | had  | id, ml
+Cardini:2025zbp            | CMS            | had  | reco, id, ml, review
+Sarkar:2025vcs             | CMS            | had  | reco, id, trig, ml
+CMS:2026zzq                | CMS            | had  | trig
+CMS:2008dex                | CMS            | had  | reco, id
+CMS:2009nxa                | CMS            | had  | reco
+CMS:2010yta                | CMS            | had  | reco
+CMS:2011msa                | CMS            | had  | reco, id
+CMS:2016gvn                | CMS            | had  | reco, id
+CMS:2025txq                | CMS            | had  | id, ml
+CMS:2025xio                | CMS            | had  | trig
+CMS:2026zoh                | CMS            | had  | fake, ml
+CMS:DP-2017-002            | CMS            | had  | id
+CMS:DP-2025-047            | CMS            | had  | id, boost, ml
+CMS:2019pkt                | CMS            | had  | fake
+CMS:2020cmk                | CMS            | had  | trig
+Zabi:2020gjd               | CMS            | had  | trig, det
+CMS:2021sdq                | CMS            | had  | pol, higgs
+CMS:2011ltz                | CMS            | had  | sm
+CMS:2014wdm                | CMS            | had  | higgs
+CMS:2017zyp                | CMS            | had  | higgs
+CMS:2018rmh                | CMS            | had  | higgs, bsm
+CMS:2021rsq                | CMS            | had  | higgs, bsm
+Bianchini:2014vza          | CMS            | had  | mass, higgs
+Bols:2020bkb               | CMS            | had  | jettag, ml
+
+# ---------------- LHCb ----------------
+LHCb:2012qfr               | LHCb           | had  | sm
+LHCb:2018ogb               | LHCb           | had  | sm
+LHCb:2017smo               | LHCb           | had  | bphys
+LHCb:2017rln               | LHCb           | had  | bphys
+LHCb:2014kws               | LHCb           | had  | prop
+
+# ---------------- Tevatron ----------------
+Levy:2005ns                | CDF, D0        | had  | id
+TeV4LHCWorkingGroup:2006qvb| CDF, D0        | had  | id, prospects
+Madar:2010pn               | D0             | had  | id, ml
+CDF:2003gms                | CDF            | had  | trig, id, sm
+Connolly:2002yn            | CDF, D0        | had  | higgs, bsm
+Deliot:2005ta              | CDF, D0        | had  | sm
+Bellavance:2005rg          | CDF, D0        | had  | sm
+Eads:2005nh                | D0             | had  | sm
+Patwa:2006rd               | CDF, D0        | had  | sm, higgs
+D0:2004kke                 | D0             | had  | sm, id
+D0:2008mwg                 | D0             | had  | sm, id
+CDF:2007tmt                | CDF            | had  | sm, id
+D0:2009puk                 | D0             | had  | sm
+Pianori:2011jj             | CDF, D0        | had  | higgs
+Scanlon:2011in             | CDF, D0        | had  | higgs, bsm
+CDF:1991mse                | CDF            | had  | sm, prop
+CDF:2005hun                | CDF            | had  | bsm
+
+# ---------------- SppS ----------------
+UA1:1986okn                | UA1            | had  | sm, prop, history
+UA2:1991aom                | UA2            | had  | sm, prop
+
+# ---------------- LEP / SLC ----------------
+ALEPH:1995nob              | ALEPH          | ee   | prop
+ALEPH:1995hnf              | ALEPH          | ee   | prop, dm
+ALEPH:2001uca              | ALEPH          | ee   | pol
+ALEPH:2005qgp              | ALEPH          | ee   | prop, review
+DELPHI:1999yne             | DELPHI         | ee   | pol
+DELPHI:2003djq             | DELPHI         | ee   | prop, dm
+Innocente:1992gq           | LEP            | ee   | id, dm, ml
+L3:1994hjr                 | L3             | ee   | prop, dm
+L3:1998oan                 | L3             | ee   | pol
+L3:2000dya                 | L3             | ee   | prop
+OPAL:1997lbr               | OPAL           | ee   | prop, dm
+OPAL:1998lid               | OPAL           | ee   | prop
+Kormos:2002mg              | OPAL           | ee   | prop
+OPAL:1996krj               | OPAL           | ee   | pol
+Garcia-Abia:1997nda        | LEP            | ee   | pol
+Etzion:1997dk              | LEP            | ee   | prop, review
+Stugu:1998jv               | LEP            | ee   | prop, review
+Matorras:2002yx            | LEP            | ee   | prop, review
+ALEPH:2005ab               | ALEPH, DELPHI, L3, OPAL, SLD | ee | pol, review
+Zhang:2006iu               | ALEPH, DELPHI, OPAL | ee | prop, review
+
+# ---------------- early e+e- (SPEAR / PEP) ----------------
+Perl:1975bf                | MarkI          | ee   | history
+Perl:1977se                | MarkI          | ee   | prop, history
+Feldman:1981md             | MarkII         | ee   | prop, history
+Jaros:1983uq               | MarkII         | ee   | prop, history
+
+# ---------------- B factories / tau-charm ----------------
+Urheim:1994yq              | CLEO           | ee   | prop, dm
+ARGUS:1992olh              | ARGUS          | ee   | prop, dm
+ARGUS:1990zee              | ARGUS          | ee   | pol, prop
+Lafferty:2006nn            | BaBar, Belle   | ee   | prop, review
+BaBar:2007yir              | BaBar          | ee   | prop
+BaBar:2012zfq              | BaBar          | ee   | prop, dm
+Oberhof:2015hea            | BaBar          | ee   | prop
+Eigen:2019ndm              | BaBar          | ee   | prop, review
+HernandezVillanueva:2018dqu| BelleII        | ee   | prop, prospects
+Bodrov:2024wrw             | Belle, BelleII | ee   | prop, review
+Belle-II:2018jsg           | BelleII        | ee   | prospects, review
+Ehataht:2023zzt            | BelleII        | ee   | pol, theory
+Chen:2018cxt               | TauFactory     | ee   | prop, theory, prospects
+Achasov:2023gey            | STCF           | ee   | prospects, det
+
+# ---------------- HERA ----------------
+H1:2006wzo                 | H1             | ep   | bsm, id
+ZEUS:2003nmf               | ZEUS           | ep   | bsm
+
+# ---------------- Future colliders ----------------
+Muennich:2010TauFinder     | ILD, CLIC      | ee   | reco
+Tran:2015nxa               | ILD            | ee   | reco, dm
+Abramowicz:2016zbo         | CLIC           | ee   | higgs, prospects
+Dam:2018rfz                | FCCee          | ee   | prop, prospects
+Giappichini:2026vlg        | FCCee          | ee   | higgs, prospects
+Giagu:2022gmq              | FutureEE       | ee   | id, ml
+Lange:2023gbe              | FutureEE       | ee   | reco, id, dm, ml
+Tani:2024qzm               | FutureEE       | ee   | reco, id, dm, calib, ml
+Seeba:2025vvp              | FutureEE       | ee   | reco, id, dm, ml
+Tani:2025osu               | FutureEE       | ee   | reco, id, dm, calib, ml
+Seeba:2026jyf              | FutureEE       | ee   | reco, id, dm, ml
+Altakach:2022ywa           | FutureEE       | ee   | pol, higgs, theory
+Gallinaro:2026djh          | MuonCollider   | mumu | reco, higgs
+Kianian:2026jpl            | MuonCollider   | mumu | reco
+
+# ---------------- Neutrino experiments ----------------
+DONUT:2000fbd              | DONUT          | nu   | nu, history
+OPERA:2018nar              | OPERA          | nu   | nu
+IceCube:2024nhk            | IceCube        | nu   | nu
+
+# ---------------- General: generic hadron-collider methods ----------------
+Huang:2023ssr              | General        | had  | id, ml
+Yaary:2023dvw              | General        | had  | trig, ml
+Tamir:2023aiz              | General        | had  | boost, id, ml
+Elagin:2010aw              | General        | had  | mass
+Kalinowski:2025vci         | General        | had  | mass
+Qu:2019gqs                 | General        | had  | jettag, ml
+Qu:2022mxj                 | General        | had  | jettag, ml
+Duarte:2018ite             | General        | had  | trig, ml
+
+# ---------------- General: theory / phenomenology ----------------
+Katz:2010iq                | General        | had  | boost, bsm, theory
+Chakraborty:2023dhw        | General        | had  | boost, theory
+Ellis:1987xu               | General        | had  | higgs, theory
+Roy:1991sf                 | General        | had  | pol, bsm, theory
+Raychaudhuri:1995kv        | General        | had  | pol, bsm, theory
+Raychaudhuri:1995cc        | General        | had  | pol, bsm, theory
+Bullock:1991fd             | General        | none | pol, bsm, theory
+Bullock:1992yt             | General        | none | pol, bsm, theory
+Hagiwara:1989fn            | General        | ee   | pol, theory
+Davier:1992nw              | General        | ee   | pol
+Tsai:1971vv                | General        | ee   | pol, theory, history
+Thacker:1971hy             | General        | none | prop, theory, history
+
+# ---------------- General: MC / simulation tools ----------------
+Jadach:1990mz              | General        | none | mc
+Jadach:1993hs              | General        | none | mc
+Davidson:2010rw            | General        | none | mc
+Czyczula:2012ny            | General        | had  | mc, pol
+Golonka:2005pn             | General        | none | mc
+Ilten:2012zb               | General        | none | mc
+Bierlich:2022pfr           | General        | none | mc
+
+# ---------------- General: reviews ----------------
+Perl:1979pb                | General        | ee   | review, history
+Pich:2013lsa               | General        | none | prop, review, theory
+Davier:2005xq              | General        | ee   | prop, review
+Stahl:2000aq               | General        | ee   | review
+ParticleDataGroup:2024cfk  | General        | none | prop, review

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Tau paper taxonomy viewer.
+#   ./tau_taxonomy                 start the viewer (localhost) and open it; read marks / bins are saved
+#   ./tau_taxonomy --no-open       start the viewer without opening a browser
+#   ./tau_taxonomy build [...]     only write the static taxonomy.html (read-only); args go to build.py,
+#                                  e.g.  ./tau_taxonomy build --zotero-bib tau_reco_zotero.bib
+set -euo pipefail
+DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+
+if [[ ${1:-} == build ]]; then
+  shift
+  exec python3 "$DIR/build.py" "$@"
+fi
+exec python3 "$DIR/serve.py" "$@"

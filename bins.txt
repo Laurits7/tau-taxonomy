@@ -1,0 +1,23 @@
+# Bins: papers that belong together (e.g. journal paper + PAS/CONF note + proceedings
+# of the same study). One bin per line:   name | key1, key2, ... | optional note
+# Written by the viewer when you edit bins there; safe to edit by hand.
+
+ATLAS 2010 tau performance | ATLAS:2010tba, Gosdzik:2010bj | guess: proceedings presenting the 2010 CONF note
+ATLAS 2011 tau performance | ATLAS:2011tfa, ATLAS:2011oka, Lai:2011sc, Friedrich:2012xr | guess: 2011 CONF notes + proceedings on them
+ATLAS boosted di-tau (HH) | ATLAS:2020azv, ATLAS:2020iwm | same study: CONF note superseded by JHEP paper
+ATLAS pre-data tau reco (CSC) | ATLAS:2009xfe, Lai:2008rt | guess: proceedings on the CSC-era studies
+ATLAS RNN tau ID | ATLAS:2019uhp, ATLAS:2022aip | guess: 2022 PUB note updates the 2019 RNN ID
+ATLAS Run-1 tau ID & calibration | ATLAS:2014rzk, ATLAS:2013qgs, Zinonos:2014rma | guess: 2012-data CONF note + proceedings feeding the EPJC paper
+ATLAS Run-1 tau trigger | ATLAS:2013uma, Sakurai:2014kha | guess
+ATLAS Run-2 tau reconstruction | ATLAS:2015xbi, ATLAS:2017mpa | guess: PUB note (expected) + CONF note (first 13 TeV data)
+ATLAS Run-2 tau trigger | ATLAS:2017hlo, Besjes:2016vhy, Ordek:2019vrf | guess: CONF note + proceedings
+Bullock-Hagiwara-Martin tau polarisation | Bullock:1991fd, Bullock:1992yt | letter + long paper
+CMS DeepTau v2 (TAU-20-001) | CMS:2022prd, Choudhury:2021vqb | guess: proceedings on DeepTau
+CMS DeepTau domain adaptation (TAU-24-001) | CMS:2025kgf, CMS:2025txq | same study: PAS + JINST paper
+CMS Run-2 tau performance (TAU-16-003) | CMS:2018jrd, CMS:2016gvn, CMS:DP-2017-002 | guess: earlier PAS (TAU-16-002) and DP note leading to the paper
+CMS Run-3 HLT tau triggers (TAU-24-002) | CMS:2026zzq, CMS:2025xio | same study: PAS + JINST paper
+CMS tau ID 2011 (TAU-11-001) | CMS:2011eio, CMS:2011msa | same study: PAS + JINST paper
+LHCb R(D*) with three-prong tau | LHCb:2017smo, LHCb:2017rln | companion PRL + PRD
+Unified ML tau reconstruction (e+e-) | Tani:2024qzm, Seeba:2025vvp | same study: proceedings on the CPC paper (confirmed by author)
+Raychaudhuri-Roy charged Higgs via tau polarisation | Raychaudhuri:1995kv, Raychaudhuri:1995cc | Tevatron + LHC versions
+TAUOLA | Jadach:1990mz, Jadach:1993hs, Davidson:2010rw | versions / interfaces of the same program

@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tau Paper Taxonomy</title>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --ink: #1d1f23; --muted: #6b6f76; --line: #e3e3df;
+  --accent: #2f5bd3; --accent-soft: #e8eefc; --hover: #f1f1ee;
+  --c-exp: #e9f0ff; --c-exp-ink: #2a4a9a;
+  --c-coll: #e8f6ee; --c-coll-ink: #23704a;
+  --c-topic: #fbf0e3; --c-topic-ink: #8a4b12;
+  --c-type: #efeff1; --c-type-ink: #50535a;
+  --c-bin: #f1e9fb; --c-bin-ink: #6a3aa8;
+  --c-read: #e3f4e8; --c-read-ink: #1f7a3e;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171a; --panel: #1d2024; --ink: #e6e6e3; --muted: #9a9ea6; --line: #2e3238;
+    --accent: #7d9df0; --accent-soft: #24304d; --hover: #252930;
+    --c-exp: #22304d; --c-exp-ink: #a9c0f5;
+    --c-coll: #1d3529; --c-coll-ink: #8fd4ae;
+    --c-topic: #3a2c1c; --c-topic-ink: #f0c18e;
+    --c-type: #2a2d33; --c-type-ink: #b6b9c0;
+    --c-bin: #33264a; --c-bin-ink: #cdb2f2;
+    --c-read: #1d3a27; --c-read-ink: #86d9a0;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15171a; --panel: #1d2024; --ink: #e6e6e3; --muted: #9a9ea6; --line: #2e3238;
+  --accent: #7d9df0; --accent-soft: #24304d; --hover: #252930;
+  --c-exp: #22304d; --c-exp-ink: #a9c0f5;
+  --c-coll: #1d3529; --c-coll-ink: #8fd4ae;
+  --c-topic: #3a2c1c; --c-topic-ink: #f0c18e;
+  --c-type: #2a2d33; --c-type-ink: #b6b9c0;
+  --c-bin: #33264a; --c-bin-ink: #cdb2f2;
+  --c-read: #1d3a27; --c-read-ink: #86d9a0;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, select, input { font: inherit; color: inherit; }
+
+.layout { display: grid; grid-template-columns: 300px 1fr; min-height: 100vh; }
+aside { background: var(--panel); border-right: 1px solid var(--line); padding: 16px; overflow-y: auto; max-height: 100vh; position: sticky; top: 0; }
+main { padding: 20px 28px 60px; min-width: 0; }
+h1 { font-size: 18px; margin: 0 0 2px; }
+.sub { color: var(--muted); font-size: 12px; margin-bottom: 14px; }
+
+input[type=search] { width: 100%; padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); }
+.facet { margin-top: 16px; }
+.facet-head { display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 6px; }
+.facet-head button { border: 0; background: none; color: var(--accent); cursor: pointer; font-size: 11px; text-transform: none; letter-spacing: 0; padding: 0; }
+.mode { display: inline-flex; border: 1px solid var(--line); border-radius: 5px; overflow: hidden; margin-left: 6px; }
+.mode button { color: var(--muted); padding: 0 6px; font-size: 11px; }
+.mode button.on { background: var(--accent-soft); color: var(--accent); }
+.tree-group > .row { font-weight: 600; }
+.tree-group > .kids { padding-left: 18px; }
+.row { display: flex; align-items: center; gap: 6px; padding: 2px 4px; border-radius: 4px; cursor: pointer; user-select: none; }
+.row:hover { background: var(--hover); }
+.row input { margin: 0; accent-color: var(--accent); }
+.row .lbl { flex: 1; }
+.row .n { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.row.zero { opacity: .45; }
+.twisty { width: 12px; color: var(--muted); font-size: 10px; text-align: center; }
+.years { display: flex; gap: 6px; align-items: center; }
+.years input { width: 72px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 5px; background: var(--bg); }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-bottom: 14px; }
+.toolbar label { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 6px; }
+.toolbar select { padding: 4px 6px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+.count { font-weight: 600; font-size: 15px; margin-right: auto; }
+.btn { padding: 5px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); cursor: pointer; font-size: 12px; }
+.btn:hover { background: var(--hover); }
+.active-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.active-filters .chip { cursor: pointer; }
+.active-filters .chip::after { content: " ×"; }
+
+details.group { margin: 6px 0; }
+details.group > summary { cursor: pointer; list-style: none; padding: 6px 4px; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 8px; }
+details.group > summary::-webkit-details-marker { display: none; }
+details.group > summary::before { content: "▸"; color: var(--muted); font-size: 11px; width: 10px; }
+details.group[open] > summary::before { content: "▾"; }
+details.group.l1 > summary { font-size: 16px; font-weight: 650; }
+details.group.l2 > summary { font-size: 14px; font-weight: 600; }
+details.group.l3 > summary { font-size: 13px; font-weight: 600; color: var(--muted); }
+details.group > .body { padding-left: 14px; }
+summary .gn { color: var(--muted); font-weight: 400; font-size: 12px; }
+
+.paper { padding: 9px 10px; border-radius: 6px; margin: 2px 0; }
+.paper:hover { background: var(--panel); }
+.paper .t { font-weight: 550; }
+.paper .m { color: var(--muted); font-size: 12.5px; margin-top: 1px; }
+.paper .m .yr { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; align-items: center; }
+.chip { font-size: 11px; padding: 1px 7px; border-radius: 10px; white-space: nowrap; }
+.chip.exp { background: var(--c-exp); color: var(--c-exp-ink); }
+.chip.coll { background: var(--c-coll); color: var(--c-coll-ink); }
+.chip.topic { background: var(--c-topic); color: var(--c-topic-ink); }
+.chip.type { background: var(--c-type); color: var(--c-type-ink); }
+.key { font-family: var(--mono); font-size: 11px; color: var(--muted); cursor: pointer; border: 0; background: none; padding: 0 0 0 4px; }
+.key:hover { color: var(--accent); }
+pre.raw { font-family: var(--mono); font-size: 11.5px; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; overflow-x: auto; margin: 6px 0 0; }
+.empty { color: var(--muted); padding: 40px 0; text-align: center; }
+.chip.bin { background: var(--c-bin); color: var(--c-bin-ink); cursor: pointer; }
+.chip.bin .x { margin-left: 4px; opacity: .6; }
+.chip.bin .x:hover { opacity: 1; }
+.paper { display: grid; grid-template-columns: 22px 1fr; column-gap: 6px; }
+.paper > .pick { padding-top: 2px; }
+.paper > .pick input { accent-color: var(--accent); margin: 0; }
+.paper.picked { background: var(--accent-soft); }
+.paper.isread .t a, .paper.isread .t > span.tt { color: var(--muted); }
+.readtoggle { font-size: 11px; padding: 1px 7px; border-radius: 10px; border: 1px dashed var(--line); background: none; cursor: pointer; color: var(--muted); }
+.readtoggle.on { border: 1px solid transparent; background: var(--c-read); color: var(--c-read-ink); }
+.readmark { color: var(--c-read-ink); font-weight: 700; margin-right: 4px; }
+.others { margin-top: 6px; border-left: 2px solid var(--c-bin); padding-left: 10px; }
+.others .oh { font-size: 11px; color: var(--c-bin-ink); font-weight: 600; margin-bottom: 2px; }
+.others .o { font-size: 12.5px; padding: 2px 0; display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+.others .o .yr { font-weight: 600; font-variant-numeric: tabular-nums; }
+.others .o.isread a { color: var(--muted); }
+.others .o.out { opacity: .55; }
+.selbar { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--line); box-shadow: 0 4px 18px rgba(0,0,0,.15); border-radius: 8px; padding: 8px 12px; display: none; gap: 8px; align-items: center; z-index: 5; max-width: calc(100vw - 32px); flex-wrap: wrap; }
+.selbar.show { display: flex; }
+.selbar .sn { font-weight: 600; margin-right: 4px; }
+.banner { background: var(--c-topic); color: var(--c-topic-ink); padding: 8px 12px; border-radius: 6px; margin-bottom: 12px; font-size: 13px; display: none; }
+.banner.show { display: block; }
+.toolbar label.check { color: var(--ink); }
+.toast { z-index: 6; }
+.toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 7px 14px; border-radius: 6px; font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+.toast.show { opacity: 1; }
+.menu-btn { display: none; }
+
+@media (max-width: 820px) {
+  .layout { grid-template-columns: 1fr; }
+  aside { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); display: none; }
+  aside.open { display: block; }
+  main { padding: 16px; }
+  .menu-btn { display: inline-block; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside id="side">
+    <h1>Tau paper taxonomy</h1>
+    <div class="sub" id="src"></div>
+    <input type="search" id="q" placeholder="Search title, authors, key, report no…">
+    <div id="facets"></div>
+  </aside>
+  <main>
+    <div class="toolbar">
+      <button class="btn menu-btn" id="menu">Filters</button>
+      <span class="count" id="count"></span>
+      <label>Group by <select id="g1"></select></label>
+      <label>then <select id="g2"></select></label>
+      <label>then <select id="g3"></select></label>
+      <label>Sort <select id="sort">
+        <option value="year-desc">Newest first</option>
+        <option value="year-asc">Oldest first</option>
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+      </select></label>
+    </div>
+    <div class="toolbar">
+      <button class="btn" id="expand">Expand all</button>
+      <button class="btn" id="collapse">Collapse all</button>
+      <button class="btn" id="cite">Copy \cite{…}</button>
+      <button class="btn" id="dlbib">Download .bib</button>
+      <button class="btn" id="dlcsv">Download .csv</button>
+      <button class="btn" id="reset">Reset filters</button>
+      <label class="check"><input type="checkbox" id="merge"> Merge bins</label>
+    </div>
+    <div class="banner" id="banner">Read-only copy: start the viewer with <code>./tau_taxonomy</code> to tick papers as read and edit bins.</div>
+    <div class="active-filters" id="active"></div>
+    <div id="list"></div>
+  </main>
+</div>
+<div class="selbar" id="selbar">
+  <span class="sn" id="selcount"></span>
+  <button class="btn" id="selbin">Put in bin…</button>
+  <button class="btn" id="selunbin">Remove from bins</button>
+  <button class="btn" id="selread">Mark read</button>
+  <button class="btn" id="selunread">Mark unread</button>
+  <button class="btn" id="selclear">Clear selection</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const M = DATA.meta, P = DATA.papers;
+const BYKEY = Object.fromEntries(P.map(p => [p.key, p]));
+const EDITABLE = location.protocol.startsWith("http");
+
+// ---- read marks & bins (persisted to read.txt / bins.txt via serve.py) ----
+let READ = new Set(DATA.read);
+let BINS = DATA.bins.map(b => ({ ...b, keys: b.keys.filter(k => BYKEY[k]) })).filter(b => b.keys.length > 1);
+let binOf = {};
+function indexBins() {
+  BINS = BINS.filter(b => b.keys.length > 1);
+  binOf = {};
+  for (const b of BINS) for (const k of b.keys) binOf[k] = b;
+}
+indexBins();
+const NOBIN = "__nobin";
+
+async function persist(what) {
+  if (!EDITABLE) { toast("Read-only: start with ./tau_taxonomy to save"); return; }
+  const body = what === "read" ? [...READ] : BINS.map(b => ({ name: b.name, keys: b.keys, note: b.note || "" }));
+  try {
+    const r = await fetch("/api/" + what, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    if (!r.ok) throw new Error(await r.text());
+  } catch (e) { toast("Could not save " + what + ": " + e.message); }
+}
+function setRead(keys, on) {
+  keys.forEach(k => on ? READ.add(k) : READ.delete(k));
+  persist("read"); update();
+}
+function removeFromBins(keys) {
+  for (const b of BINS) b.keys = b.keys.filter(k => !keys.includes(k));
+  indexBins(); persist("bins"); update();
+}
+function putInBin(keys) {
+  const existing = [...new Set(keys.map(k => binOf[k]).filter(Boolean))];
+  const suggestion = existing.length ? existing[0].name : (BYKEY[keys[0]] ? BYKEY[keys[0]].title.slice(0, 60) : "");
+  const hint = BINS.length ? "\n\nExisting bins: " + BINS.map(b => b.name).join(" · ") : "";
+  let name = prompt("Bin name (an existing name adds to that bin; bins of the selected papers are merged into it):" + hint, suggestion);
+  if (name === null) return;
+  name = name.replace(/\|/g, "/").trim();
+  if (!name) return;
+  let target = BINS.find(b => b.name === name);
+  if (!target) { target = { name, keys: [], note: "" }; BINS.push(target); }
+  // merge whole bins the selected papers were already in
+  const moving = new Set(keys);
+  for (const b of existing) if (b !== target) b.keys.forEach(k => moving.add(k));
+  for (const b of BINS) if (b !== target) b.keys = b.keys.filter(k => !moving.has(k));
+  for (const k of moving) if (!target.keys.includes(k)) target.keys.push(k);
+  if (target.keys.length < 2) toast("A bin needs at least two papers");
+  indexBins(); persist("bins"); SEL.clear(); update();
+}
+function editBinNote(b) {
+  const note = prompt(`Note for bin "${b.name}":`, b.note || "");
+  if (note === null) return;
+  b.note = note.replace(/\|/g, "/").trim(); persist("bins"); update();
+}
+
+// ---- selection ----
+const SEL = new Set();
+function renderSelbar() {
+  const bar = document.getElementById("selbar");
+  bar.classList.toggle("show", SEL.size > 0);
+  document.getElementById("selcount").textContent = SEL.size + " selected";
+}
+
+const UNCL = "__none";
+const expLabel = c => c === UNCL ? "Unclassified" : M.experiments[c].label;
+const facOf = c => c === UNCL ? "Unclassified" : M.experiments[c].facility;
+const topicLabel = c => c === UNCL ? "Unclassified" : M.topics[c].label;
+const topicGroup = c => c === UNCL ? "Unclassified" : M.topics[c].group;
+const collLabel = c => M.collisions[c] || "Unclassified";
+const exps = p => p.exp.length ? p.exp : [UNCL];
+const tops = p => p.topics.length ? p.topics : [UNCL];
+
+const DOCTYPES = ["Journal article", "Journal (review)", "Preprint", "Public note (CONF / PUB / PAS / DP)",
+                  "Proceedings / talk", "Technical design report"];
+const decade = y => Math.floor(y / 10) * 10 + "s";
+
+// ---- facets: each has value-extractor (array) and tree structure ----
+const FACETS = [
+  { id: "exp", title: "Experiment", values: exps, mode: "any",
+    tree: () => {
+      const facs = [...M.facilityOrder];
+      if (P.some(p => !p.exp.length)) facs.push("Unclassified");
+      return facs.map(f => ({ label: f, kids: [...Object.keys(M.experiments).filter(c => M.experiments[c].facility === f),
+                                                ...(f === "Unclassified" ? [UNCL] : [])].map(c => ({ code: c, label: expLabel(c) })) }));
+    } },
+  { id: "coll", title: "Collision type", values: p => [p.coll || UNCL], mode: "any",
+    tree: () => Object.keys(M.collisions).map(c => ({ code: c, label: M.collisions[c] })) },
+  { id: "topic", title: "Topic", values: tops, mode: "any", modeToggle: true,
+    tree: () => M.topicGroupOrder.map(g => ({ label: g, kids: Object.keys(M.topics).filter(c => M.topics[c].group === g).map(c => ({ code: c, label: topicLabel(c) })) })) },
+  { id: "doctype", title: "Document type", values: p => [p.doctype], mode: "any",
+    tree: () => DOCTYPES.map(d => ({ code: d, label: d })) },
+  { id: "status", title: "Reading status", values: p => [READ.has(p.key) ? "read" : "unread"], dynamic: true,
+    tree: () => [{ code: "read", label: "Read" }, { code: "unread", label: "Unread" }] },
+  { id: "bin", title: "Bins", values: p => [binOf[p.key] ? binOf[p.key].name : NOBIN], dynamic: true,
+    tree: () => [{ code: NOBIN, label: "Not in a bin" },
+                 { label: `Bins (${BINS.length})`, kids: [...BINS].sort((a, b) => a.name.localeCompare(b.name)).map(b => ({ code: b.name, label: b.name })) }] },
+];
+
+// ---- grouping dimensions ----
+const GROUPS = {
+  none: { label: "—" },
+  facility: { label: "Facility", keys: p => [...new Set(exps(p).map(facOf))], order: [...M.facilityOrder, "Unclassified"] },
+  exp: { label: "Experiment", keys: p => exps(p).map(expLabel), order: [...Object.keys(M.experiments).map(expLabel), "Unclassified"] },
+  coll: { label: "Collision type", keys: p => [collLabel(p.coll)], order: [...Object.values(M.collisions), "Unclassified"] },
+  topicgroup: { label: "Topic area", keys: p => [...new Set(tops(p).map(topicGroup))], order: [...M.topicGroupOrder, "Unclassified"] },
+  topic: { label: "Topic", keys: p => tops(p).map(topicLabel), order: [...Object.keys(M.topics).map(topicLabel), "Unclassified"] },
+  doctype: { label: "Document type", keys: p => [p.doctype], order: DOCTYPES },
+  decade: { label: "Decade", keys: p => [decade(p.year)], order: null },
+};
+
+// ---- state ----
+const yrs = P.map(p => p.year).filter(Boolean);
+const YMIN = Math.min(...yrs), YMAX = Math.max(...yrs);
+const DEFAULT = { q: "", sel: { exp: [], coll: [], topic: [], doctype: [], status: [], bin: [] }, topicMode: "any",
+                  y0: YMIN, y1: YMAX, g1: "facility", g2: "topic", g3: "none", sort: "year-desc", open: [], merge: true };
+let S = loadState();
+const openRaw = new Set();
+
+function loadState() {
+  try {
+    const h = decodeURIComponent(location.hash.slice(1));
+    if (h) {
+      const st = Object.assign(structuredClone(DEFAULT), JSON.parse(h));
+      st.sel = Object.assign(structuredClone(DEFAULT.sel), st.sel);
+      return st;
+    }
+  } catch (e) {}
+  return structuredClone(DEFAULT);
+}
+function saveState() {
+  try { history.replaceState(null, "", "#" + encodeURIComponent(JSON.stringify(S))); } catch (e) {}
+}
+
+// ---- filtering ----
+function textMatch(p, q) {
+  if (!q) return true;
+  const hay = (p.title + " " + p.allAuthors + " " + p.key + " " + p.report + " " + p.venue + " " + p.year).toLowerCase();
+  return q.toLowerCase().split(/\s+/).every(w => hay.includes(w));
+}
+function facetMatch(p, f, sel) {
+  if (!sel.length) return true;
+  const v = f.values(p);
+  if (f.id === "topic" && S.topicMode === "all") return sel.every(s => v.includes(s));
+  return sel.some(s => v.includes(s));
+}
+function passes(p, except) {
+  if (!textMatch(p, S.q)) return false;
+  if (p.year < S.y0 || p.year > S.y1) return false;
+  return FACETS.every(f => f.id === except || facetMatch(p, f, S.sel[f.id]));
+}
+
+// ---- sidebar ----
+function renderFacets() {
+  const root = document.getElementById("facets");
+  root.innerHTML = "";
+  for (const f of FACETS) {
+    const pool = P.filter(p => passes(p, f.id));
+    const cnt = {};
+    for (const p of pool) for (const v of f.values(p)) cnt[v] = (cnt[v] || 0) + 1;
+    const total = {};
+    for (const p of P) for (const v of f.values(p)) total[v] = (total[v] || 0) + 1;
+
+    const box = el("div", "facet");
+    const head = el("div", "facet-head");
+    const ttl = el("span"); ttl.textContent = f.title;
+    if (f.modeToggle) {
+      const mode = el("span", "mode");
+      for (const m of ["any", "all"]) {
+        const b = el("button", S.topicMode === m ? "on" : "");
+        b.textContent = m; b.title = m === "any" ? "Paper has at least one selected topic" : "Paper has all selected topics";
+        b.onclick = () => { S.topicMode = m; update(); };
+        mode.append(b);
+      }
+      ttl.append(mode);
+    }
+    head.append(ttl);
+    if (S.sel[f.id].length) {
+      const clr = el("button"); clr.textContent = "clear";
+      clr.onclick = () => { S.sel[f.id] = []; update(); };
+      head.append(clr);
+    }
+    box.append(head);
+
+    const leaf = n => {
+      if (!total[n.code]) return null;
+      const r = el("label", "row" + (cnt[n.code] ? "" : " zero"));
+      const cb = document.createElement("input"); cb.type = "checkbox";
+      cb.checked = S.sel[f.id].includes(n.code);
+      cb.onchange = () => toggle(f.id, [n.code], cb.checked);
+      const l = el("span", "lbl"); l.textContent = n.label;
+      const c = el("span", "n"); c.textContent = cnt[n.code] || 0;
+      r.append(el("span", "twisty"), cb, l, c);
+      return r;
+    };
+    for (const n of f.tree()) {
+      if (!n.kids) { const r = leaf(n); if (r) box.append(r); continue; }
+      const kids = n.kids.filter(k => total[k.code]);
+      if (!kids.length) continue;
+      const codes = kids.map(k => k.code);
+      const g = el("div", "tree-group");
+      const r = el("div", "row");
+      const tw = el("span", "twisty");
+      const openKey = f.id + ":" + n.label;
+      const isOpen = S.open.includes(openKey) || codes.some(c => S.sel[f.id].includes(c));
+      tw.textContent = isOpen ? "▾" : "▸";
+      const cb = document.createElement("input"); cb.type = "checkbox";
+      const nsel = codes.filter(c => S.sel[f.id].includes(c)).length;
+      cb.checked = nsel === codes.length; cb.indeterminate = nsel > 0 && nsel < codes.length;
+      cb.onclick = e => e.stopPropagation();
+      cb.onchange = () => toggle(f.id, codes, cb.checked);
+      const l = el("span", "lbl"); l.textContent = n.label;
+      const gc = el("span", "n");
+      gc.textContent = pool.filter(p => f.values(p).some(v => codes.includes(v))).length;
+      r.append(tw, cb, l, gc);
+      r.onclick = () => {
+        S.open = S.open.includes(openKey) ? S.open.filter(x => x !== openKey) : [...S.open, openKey];
+        update();
+      };
+      g.append(r);
+      if (isOpen) {
+        const kd = el("div", "kids");
+        kids.forEach(k => kd.append(leaf(k)));
+        g.append(kd);
+      }
+      box.append(g);
+    }
+    root.append(box);
+  }
+  // year range
+  const yb = el("div", "facet");
+  yb.innerHTML = `<div class="facet-head"><span>Years</span></div>
+    <div class="years"><input type="number" id="y0" min="${YMIN}" max="${YMAX}" value="${S.y0}"> – <input type="number" id="y1" min="${YMIN}" max="${YMAX}" value="${S.y1}"></div>`;
+  root.append(yb);
+  yb.querySelector("#y0").onchange = e => { S.y0 = +e.target.value || YMIN; update(); };
+  yb.querySelector("#y1").onchange = e => { S.y1 = +e.target.value || YMAX; update(); };
+}
+
+function toggle(fid, codes, on) {
+  const s = new Set(S.sel[fid]);
+  codes.forEach(c => on ? s.add(c) : s.delete(c));
+  S.sel[fid] = [...s];
+  update();
+}
+
+// ---- main list ----
+const sorters = {
+  "year-desc": (a, b) => b.year - a.year || a.title.localeCompare(b.title),
+  "year-asc": (a, b) => a.year - b.year || a.title.localeCompare(b.title),
+  "title": (a, b) => a.title.localeCompare(b.title),
+  "author": (a, b) => a.authors.localeCompare(b.authors) || a.year - b.year,
+};
+
+function groupBy(list, dims) {
+  if (!dims.length) return null;
+  const g = GROUPS[dims[0]], buckets = new Map();
+  for (const p of list) for (const k of g.keys(p)) {
+    if (!buckets.has(k)) buckets.set(k, []);
+    buckets.get(k).push(p);
+  }
+  let keys = [...buckets.keys()];
+  if (g.order) keys.sort((a, b) => idx(g.order, a) - idx(g.order, b));
+  else keys.sort((a, b) => S.sort === "year-asc" ? a.localeCompare(b) : b.localeCompare(a));
+  return keys.map(k => ({ key: k, items: buckets.get(k), sub: groupBy(buckets.get(k), dims.slice(1)) }));
+}
+const idx = (arr, v) => { const i = arr.indexOf(v); return i < 0 ? 1e9 : i; };
+
+function chip(cls, text) { const c = el("span", "chip " + cls); c.textContent = text; return c; }
+
+// representative of a bin: journal paper > preprint/TDR > public note > proceedings, then newest
+const DOC_RANK = { "Journal article": 0, "Journal (review)": 0, "Preprint": 1, "Technical design report": 1,
+                   "Public note (CONF / PUB / PAS / DP)": 2, "Proceedings / talk": 3 };
+const repOrder = (a, b) => (DOC_RANK[a.doctype] ?? 9) - (DOC_RANK[b.doctype] ?? 9) || b.year - a.year;
+
+function titleLink(p) {
+  if (!p.url) { const s = el("span", "tt"); s.textContent = p.title; return s; }
+  const a = document.createElement("a"); a.href = p.url; a.target = "_blank"; a.rel = "noopener"; a.textContent = p.title;
+  return a;
+}
+
+function binChip(b) {
+  const c = chip("bin", "⧉ " + b.name + " (" + b.keys.length + ")");
+  c.title = (b.note ? b.note + "\n\n" : "") + "Click: show only this bin" + (EDITABLE ? " · Shift-click: edit note" : "");
+  c.onclick = e => { if (e.shiftKey && EDITABLE) editBinNote(b); else { S.sel.bin = [b.name]; update(); } };
+  return c;
+}
+
+function paperEl(p, others) {
+  const d = el("div", "paper" + (READ.has(p.key) ? " isread" : "") + (SEL.has(p.key) ? " picked" : ""));
+  const pick = el("div", "pick");
+  if (EDITABLE) {
+    const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = SEL.has(p.key);
+    cb.title = "Select (to bin or mark several papers)";
+    cb.onchange = () => { cb.checked ? SEL.add(p.key) : SEL.delete(p.key); d.classList.toggle("picked", cb.checked); renderSelbar(); };
+    pick.append(cb);
+  }
+  const body = el("div");
+  const t = el("div", "t");
+  if (READ.has(p.key)) { const rm = el("span", "readmark"); rm.textContent = "✓"; rm.title = "Read"; t.append(rm); }
+  t.append(titleLink(p));
+  const m = el("div", "m");
+  const yr = el("span", "yr"); yr.textContent = p.year;
+  m.append(yr, document.createTextNode(" · " + p.authors + (p.venue ? " · " + p.venue : "") +
+    (p.report && !p.venue.includes(p.report.split(",")[0]) ? " · " + p.report.split(",")[0] : "")));
+  const ch = el("div", "chips");
+  exps(p).forEach(c => ch.append(chip("exp", expLabel(c))));
+  ch.append(chip("coll", collLabel(p.coll)));
+  tops(p).forEach(c => ch.append(chip("topic", topicLabel(c))));
+  ch.append(chip("type", p.doctype));
+  const b = binOf[p.key];
+  if (b && !others) ch.append(binChip(b));
+  const rt = el("button", "readtoggle" + (READ.has(p.key) ? " on" : ""));
+  rt.textContent = READ.has(p.key) ? "✓ read" : "mark read";
+  rt.onclick = () => setRead([p.key], !READ.has(p.key));
+  if (!EDITABLE && !READ.has(p.key)) rt.style.display = "none";
+  const k = el("button", "key"); k.textContent = p.key; k.title = "Copy key";
+  k.onclick = () => copy(p.key, "Copied " + p.key);
+  const rb = el("button", "key"); rb.textContent = openRaw.has(p.key) ? "hide bib" : "bib";
+  rb.onclick = () => { openRaw.has(p.key) ? openRaw.delete(p.key) : openRaw.add(p.key); render(); };
+  ch.append(rt, k, rb);
+  body.append(t, m, ch);
+  if (openRaw.has(p.key)) { const pre = el("pre", "raw"); pre.textContent = p.raw; body.append(pre); }
+  if (others && others.length) {
+    const box = el("div", "others");
+    const oh = el("div", "oh");
+    oh.append(binChip(b));
+    if (b.note) oh.append(document.createTextNode("  " + b.note));
+    box.append(oh);
+    for (const o of others) {
+      const row = el("div", "o" + (READ.has(o.key) ? " isread" : "") + (passes(o) ? "" : " out"));
+      if (!passes(o)) row.title = "Does not match the current filters";
+      if (EDITABLE) {
+        const cb = document.createElement("input"); cb.type = "checkbox"; cb.checked = SEL.has(o.key);
+        cb.onchange = () => { cb.checked ? SEL.add(o.key) : SEL.delete(o.key); renderSelbar(); };
+        row.append(cb);
+      }
+      if (READ.has(o.key)) { const rm = el("span", "readmark"); rm.textContent = "✓"; row.append(rm); }
+      const yr = el("span", "yr"); yr.textContent = o.year;
+      const ty = chip("type", o.doctype);
+      const info = el("span"); info.textContent = (o.venue || o.report.split(",")[0]);
+      info.style.color = "var(--muted)";
+      const ok = el("button", "key"); ok.textContent = o.key; ok.onclick = () => copy(o.key, "Copied " + o.key);
+      const ort = el("button", "readtoggle" + (READ.has(o.key) ? " on" : ""));
+      ort.textContent = READ.has(o.key) ? "✓ read" : "mark read";
+      ort.onclick = () => setRead([o.key], !READ.has(o.key));
+      if (!EDITABLE && !READ.has(o.key)) ort.style.display = "none";
+      row.append(yr, ty, titleLink(o), info, ort, ok);
+      box.append(row);
+    }
+    body.append(box);
+  }
+  d.append(pick, body);
+  return d;
+}
+
+function renderGroups(container, groups, level, path) {
+  for (const g of groups) {
+    const id = path + "/" + g.key;
+    const det = el("details", "group l" + level);
+    det.open = !closed.has(id);
+    det.ontoggle = () => { det.open ? closed.delete(id) : closed.add(id); };
+    const sm = document.createElement("summary");
+    sm.textContent = g.key + " ";
+    const n = el("span", "gn"); n.textContent = g.items.length;
+    sm.append(n);
+    const body = el("div", "body");
+    if (g.sub) renderGroups(body, g.sub, level + 1, id);
+    else g.items.forEach(p => body.append(paperEl(p, S.merge ? othersOf[p.key] : null)));
+    det.append(sm, body);
+    container.append(det);
+  }
+}
+const closed = new Set();
+
+let current = [];      // papers matching the filters
+let shown = [];        // what is listed (bin representatives when merging)
+let othersOf = {};     // representative key -> other bin members
+function render() {
+  current = P.filter(p => passes(p)).sort(sorters[S.sort]);
+  othersOf = {};
+  if (S.merge) {
+    const seen = new Set();
+    shown = [];
+    for (const p of current) {
+      const b = binOf[p.key];
+      if (!b) { shown.push(p); continue; }
+      if (seen.has(b)) continue;
+      seen.add(b);
+      const rep = current.filter(q => binOf[q.key] === b).sort(repOrder)[0];
+      othersOf[rep.key] = b.keys.filter(k => k !== rep.key).map(k => BYKEY[k]).sort(repOrder);
+      shown.push(rep);
+    }
+    shown.sort(sorters[S.sort]);
+  } else shown = current;
+  const list = document.getElementById("list");
+  list.innerHTML = "";
+  const nRead = current.filter(p => READ.has(p.key)).length;
+  document.getElementById("count").textContent = `${current.length} of ${P.length} papers` +
+    (S.merge && shown.length !== current.length ? ` · ${shown.length} after merging bins` : "") +
+    ` · ${nRead} read`;
+  renderActive();
+  renderSelbar();
+  if (!current.length) { list.innerHTML = `<div class="empty">No papers match these filters.</div>`; return; }
+  const dims = [S.g1, S.g2, S.g3].filter(d => d !== "none");
+  const groups = groupBy(shown, dims);
+  if (groups) renderGroups(list, groups, 1, "");
+  else shown.forEach(p => list.append(paperEl(p, S.merge ? othersOf[p.key] : null)));
+}
+
+function renderActive() {
+  const a = document.getElementById("active");
+  a.innerHTML = "";
+  const lab = { exp: expLabel, coll: collLabel, topic: topicLabel, doctype: x => x,
+                status: x => x === "read" ? "Read" : "Unread", bin: x => x === NOBIN ? "Not in a bin" : "⧉ " + x };
+  const cls = { exp: "exp", coll: "coll", topic: "topic", doctype: "type", status: "type", bin: "bin" };
+  for (const f of FACETS) for (const v of S.sel[f.id]) {
+    const c = chip(cls[f.id], lab[f.id](v)); c.title = "Remove filter";
+    c.onclick = () => toggle(f.id, [v], false);
+    a.append(c);
+  }
+}
+
+function update() {
+  S.sel.bin = S.sel.bin.filter(n => n === NOBIN || BINS.some(b => b.name === n));
+  saveState(); renderFacets(); render();
+}
+
+// ---- helpers / actions ----
+function el(tag, cls) { const e = document.createElement(tag); if (cls) e.className = cls; return e; }
+function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast.h); toast.h = setTimeout(() => t.classList.remove("show"), 1600); }
+function copy(text, msg) {
+  (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+    .then(() => toast(msg), () => { prompt("Copy:", text); });
+}
+function download(name, text, type) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([text], { type }));
+  a.download = name; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+const csvq = s => '"' + String(s).replace(/"/g, '""') + '"';
+
+function fillSelect(id, val) {
+  const s = document.getElementById(id);
+  s.innerHTML = Object.entries(GROUPS).map(([k, g]) => `<option value="${k}">${g.label}</option>`).join("");
+  s.value = val;
+  s.onchange = () => { S[id] = s.value; closed.clear(); update(); };
+}
+
+document.getElementById("src").textContent = `${P.length} entries · ${M.source}`;
+const q = document.getElementById("q");
+q.value = S.q;
+q.oninput = () => { S.q = q.value; update(); };
+["g1", "g2", "g3"].forEach(id => fillSelect(id, S[id]));
+const sortSel = document.getElementById("sort");
+sortSel.value = S.sort;
+sortSel.onchange = () => { S.sort = sortSel.value; update(); };
+document.getElementById("expand").onclick = () => { closed.clear(); render(); };
+document.getElementById("collapse").onclick = () => {
+  document.querySelectorAll("details.group.l1").forEach(d => d.open = false);
+};
+document.getElementById("cite").onclick = () => copy(`\\cite{${shown.map(p => p.key).join(",")}}`, `Copied \\cite with ${shown.length} keys`);
+document.getElementById("dlbib").onclick = () => download("tau_selection.bib", shown.map(p => p.raw).join("\n\n") + "\n", "text/x-bibtex");
+document.getElementById("dlcsv").onclick = () => download("tau_selection.csv",
+  ["key,year,title,authors,venue,experiments,collision,topics,doctype,url,read,bin"].concat(current.map(p =>
+    [p.key, p.year, p.title, p.authors, p.venue, exps(p).map(expLabel).join("; "), collLabel(p.coll),
+     tops(p).map(topicLabel).join("; "), p.doctype, p.url, READ.has(p.key) ? "yes" : "", binOf[p.key] ? binOf[p.key].name : ""].map(csvq).join(","))).join("\n"), "text/csv");
+document.getElementById("reset").onclick = () => { S = structuredClone(DEFAULT); q.value = ""; mergeCb.checked = S.merge; ["g1", "g2", "g3"].forEach(id => document.getElementById(id).value = S[id]); sortSel.value = S.sort; update(); };
+const mergeCb = document.getElementById("merge");
+mergeCb.checked = S.merge;
+mergeCb.onchange = () => { S.merge = mergeCb.checked; update(); };
+document.getElementById("banner").classList.toggle("show", !EDITABLE);
+document.getElementById("selbin").onclick = () => putInBin([...SEL]);
+document.getElementById("selunbin").onclick = () => { removeFromBins([...SEL]); SEL.clear(); update(); };
+document.getElementById("selread").onclick = () => { setRead([...SEL], true); SEL.clear(); update(); };
+document.getElementById("selunread").onclick = () => { setRead([...SEL], false); SEL.clear(); update(); };
+document.getElementById("selclear").onclick = () => { SEL.clear(); render(); };
+document.getElementById("menu").onclick = () => document.getElementById("side").classList.toggle("open");
+
+update();
+</script>
+</body>
+</html>
