@@ -3,8 +3,6 @@
 A small, dependency-free tool that turns a BibTeX file into a browsable, filterable
 "taxonomy tree" of papers (by experiment, collision type, topic, document type and year).
 
-Source bibliography: `tau_reco_merged.bib` (199 entries, copied from `~/Downloads`).
-
 ## Quick start
 
 ```bash
