@@ -1,0 +1,5202 @@
+{
+"edges": [
+[
+"ALEPH:1995hnf",
+"ARGUS:1992olh",
+"",
+true
+],
+[
+"ALEPH:1995hnf",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"ALEPH:1995hnf",
+"L3:1994hjr",
+"report number",
+false
+],
+[
+"ALEPH:1995nob",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"ALEPH:2001uca",
+"ALEPH:1995hnf",
+"journal ref",
+true
+],
+[
+"ALEPH:2001uca",
+"ALEPH:1995nob",
+"journal ref",
+true
+],
+[
+"ALEPH:2001uca",
+"DELPHI:1999yne",
+"journal ref",
+false
+],
+[
+"ALEPH:2001uca",
+"Davier:1992nw",
+"journal ref",
+true
+],
+[
+"ALEPH:2001uca",
+"L3:1998oan",
+"journal ref",
+true
+],
+[
+"ALEPH:2001uca",
+"OPAL:1996krj",
+"title",
+true
+],
+[
+"ALEPH:2005ab",
+"ALEPH:2001uca",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"DELPHI:1999yne",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"Davier:1992nw",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"Jadach:1990mz",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"L3:1998oan",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"OPAL:1996krj",
+"journal ref",
+true
+],
+[
+"ALEPH:2005ab",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"ALEPH:2005qgp",
+"ALEPH:1995hnf",
+"journal ref",
+true
+],
+[
+"ALEPH:2005qgp",
+"ALEPH:1995nob",
+"journal ref",
+true
+],
+[
+"ALEPH:2005qgp",
+"ALEPH:2001uca",
+"journal ref",
+true
+],
+[
+"ALEPH:2005qgp",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"ALEPH:2005qgp",
+"OPAL:1997lbr",
+"journal ref",
+true
+],
+[
+"ALEPH:2005qgp",
+"OPAL:1998lid",
+"journal ref",
+true
+],
+[
+"ARGUS:1990zee",
+"Perl:1975bf",
+"",
+true
+],
+[
+"ARGUS:1990zee",
+"Perl:1979pb",
+"",
+true
+],
+[
+"ARGUS:1992olh",
+"ARGUS:1990zee",
+"",
+true
+],
+[
+"ATLAS:2009xfe",
+"ATLAS:2009yiv",
+"title",
+false
+],
+[
+"ATLAS:2009xfe",
+"Heldmann:2005zda",
+"report number",
+true
+],
+[
+"ATLAS:2009xfe",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"ATLAS:2009xfe",
+"Richter-Was:2004hwa",
+"report number",
+true
+],
+[
+"ATLAS:2009yiv",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"ATLAS:2010pba",
+"ATLAS:2010maa",
+"report number",
+true
+],
+[
+"ATLAS:2011ohj",
+"CDF:2007tmt",
+"",
+true
+],
+[
+"ATLAS:2011ohj",
+"CMS:2011ltz",
+"",
+true
+],
+[
+"ATLAS:2011ohj",
+"D0:2008mwg",
+"",
+true
+],
+[
+"ATLAS:2011ohj",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"ATLAS:2011ohj",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"ATLAS:2011oka",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"ATLAS:2011oka",
+"ATLAS:2011ohj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2011oka",
+"ATLAS:2011tfa",
+"title",
+true
+],
+[
+"ATLAS:2011oka",
+"ATLAS:2011zia",
+"report number",
+true
+],
+[
+"ATLAS:2011oka",
+"Lai:2008rt",
+"title",
+false
+],
+[
+"ATLAS:2011pse",
+"CDF:1991mse",
+"",
+true
+],
+[
+"ATLAS:2011pse",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"ATLAS:2011pse",
+"UA1:1986okn",
+"",
+true
+],
+[
+"ATLAS:2011tfa",
+"ATLAS:2010tba",
+"",
+true
+],
+[
+"ATLAS:2011zia",
+"ATLAS:2010tba",
+"report number",
+true
+],
+[
+"ATLAS:2011zia",
+"ATLAS:2011tfa",
+"report number",
+true
+],
+[
+"ATLAS:2012voa",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"ATLAS:2012voa",
+"ATLAS:2011ohj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2012voa",
+"ATLAS:2011oka",
+"report number",
+true
+],
+[
+"ATLAS:2012voa",
+"ATLAS:2011pse",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2012voa",
+"ATLAS:2011tfa",
+"report number",
+true
+],
+[
+"ATLAS:2012voa",
+"ATLAS:2011zia",
+"report number",
+true
+],
+[
+"ATLAS:2012voa",
+"Lai:2008rt",
+"title",
+false
+],
+[
+"ATLAS:2013qgs",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"ATLAS:2013qgs",
+"ATLAS:2011ohj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2013qgs",
+"ATLAS:2011oka",
+"report number",
+true
+],
+[
+"ATLAS:2013qgs",
+"ATLAS:2011pse",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2013qgs",
+"ATLAS:2011tfa",
+"report number",
+true
+],
+[
+"ATLAS:2013qgs",
+"ATLAS:2012voa",
+"report number",
+true
+],
+[
+"ATLAS:2013qgs",
+"Lai:2008rt",
+"title",
+false
+],
+[
+"ATLAS:2013uma",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"ATLAS:2013uma",
+"ATLAS:2010pba",
+"report number",
+true
+],
+[
+"ATLAS:2013uma",
+"ATLAS:2011oka",
+"report number",
+true
+],
+[
+"ATLAS:2013uma",
+"ATLAS:2011tfa",
+"report number",
+true
+],
+[
+"ATLAS:2013uma",
+"Lai:2008rt",
+"title",
+false
+],
+[
+"ATLAS:2014rzk",
+"ATLAS:2011ohj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2014rzk",
+"ATLAS:2011pse",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"ALEPH:2005qgp",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"ATLAS:2011ohj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"ATLAS:2011pse",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"CMS:2014wdm",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"D0:2008mwg",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"DELPHI:2003djq",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"Elagin:2010aw",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"Golonka:2005pn",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"Ilten:2012zb",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015boj",
+"L3:1998oan",
+"title",
+true
+],
+[
+"ATLAS:2015boj",
+"Thacker:1971hy",
+"journal ref",
+false
+],
+[
+"ATLAS:2015xbi",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2015xbi",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2015xst",
+"ATLAS:2011ohj",
+"",
+true
+],
+[
+"ATLAS:2015xst",
+"ATLAS:2014rzk",
+"",
+true
+],
+[
+"ATLAS:2015xst",
+"CMS:2014wdm",
+"",
+true
+],
+[
+"ATLAS:2015xst",
+"Czyczula:2012ny",
+"",
+true
+],
+[
+"ATLAS:2015xst",
+"Elagin:2010aw",
+"",
+true
+],
+[
+"ATLAS:2015xst",
+"Ellis:1987xu",
+"",
+true
+],
+[
+"ATLAS:2015xst",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"ATLAS:2016neq",
+"ATLAS:2015xst",
+"",
+true
+],
+[
+"ATLAS:2016neq",
+"CMS:2014wdm",
+"",
+true
+],
+[
+"ATLAS:2017hlo",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2017hlo",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017hlo",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"ATLAS:2017hlo",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017hlo",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2017hlo",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017hlo",
+"Golonka:2005pn",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017mpa",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2017mpa",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017mpa",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017mpa",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"ATLAS:2017mpa",
+"Golonka:2005pn",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2017xuc",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"ATLAS:2017xuc",
+"ATLAS:2014rzk",
+"",
+true
+],
+[
+"ATLAS:2017xuc",
+"ATLAS:2015boj",
+"",
+true
+],
+[
+"ATLAS:2017xuc",
+"Czyczula:2012ny",
+"",
+true
+],
+[
+"ATLAS:2017xuc",
+"Davidson:2010rw",
+"",
+true
+],
+[
+"ATLAS:2017xuc",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"ATLAS:2018gfm",
+"ATLAS:2014rzk",
+"",
+true
+],
+[
+"ATLAS:2018gfm",
+"ATLAS:2015xbi",
+"",
+true
+],
+[
+"ATLAS:2018gfm",
+"ATLAS:2017mpa",
+"",
+true
+],
+[
+"ATLAS:2018gfm",
+"CMS:2018rmh",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"ATLAS:2014rzk",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"ATLAS:2015xbi",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"ATLAS:2015xst",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"ATLAS:2017hlo",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"ATLAS:2017mpa",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"CMS:2017zyp",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"Elagin:2010aw",
+"",
+true
+],
+[
+"ATLAS:2018ynr",
+"Ellis:1987xu",
+"",
+true
+],
+[
+"ATLAS:2019gti",
+"ATLAS:2014rzk",
+"",
+true
+],
+[
+"ATLAS:2019gti",
+"ATLAS:2017hlo",
+"",
+true
+],
+[
+"ATLAS:2019gti",
+"ATLAS:2017mpa",
+"",
+true
+],
+[
+"ATLAS:2019tjd",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2019tjd",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2019tjd",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2019tjd",
+"ATLAS:2019gti",
+"title",
+false
+],
+[
+"ATLAS:2019uhp",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2019uhp",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2019uhp",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2019uhp",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"ATLAS:2019uhp",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2020azv",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2020azv",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2020azv",
+"Thacker:1971hy",
+"journal ref",
+false
+],
+[
+"ATLAS:2020hgtdTDR",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"ATLAS:2020hgtdTDR",
+"ATLAS:2017tdaqTDR",
+"",
+true
+],
+[
+"ATLAS:2020iwm",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2020zms",
+"ATLAS:2014rzk",
+"",
+true
+],
+[
+"ATLAS:2020zms",
+"ATLAS:2017mpa",
+"",
+true
+],
+[
+"ATLAS:2020zms",
+"CMS:2018rmh",
+"",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2017xuc",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2019uhp",
+"report number",
+true
+],
+[
+"ATLAS:2022aip",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2022aip",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2022akr",
+"ATLAS:2015boj",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"ATLAS:2015xst",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"ATLAS:2017mpa",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"ATLAS:2018ynr",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"ATLAS:2019uhp",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"CMS:2014wdm",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"CMS:2021sdq",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"Czyczula:2012ny",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"Davidson:2010rw",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"Elagin:2010aw",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"ATLAS:2022akr",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2019uhp",
+"report number",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2020azv",
+"title",
+false
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2020iwm",
+"report number",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2022aip",
+"report number",
+true
+],
+[
+"ATLAS:2024jgt",
+"ATLAS:2024vdo",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024jgt",
+"Chen:2018cxt",
+"journal ref",
+false
+],
+[
+"ATLAS:2024jgt",
+"Ellis:1987xu",
+"DOI",
+true
+],
+[
+"ATLAS:2024jgt",
+"ParticleDataGroup:2024cfk",
+"journal ref",
+true
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2020azv",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2020iwm",
+"title",
+false
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2022aip",
+"report number",
+true
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2024jgt",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024lbg",
+"ATLAS:2024vdo",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024lbg",
+"ParticleDataGroup:2024cfk",
+"journal ref",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2017tdaqTDR",
+"report number",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2019uhp",
+"report number",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2020azv",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2020hgtdTDR",
+"report number",
+false
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2020iwm",
+"title",
+false
+],
+[
+"ATLAS:2024vdo",
+"ATLAS:2022aip",
+"report number",
+true
+],
+[
+"ATLAS:2024vdo",
+"Golonka:2005pn",
+"DOI",
+true
+],
+[
+"ATLAS:2024vdo",
+"Jadach:1990mz",
+"title",
+true
+],
+[
+"ATLAS:2024vdo",
+"Thacker:1971hy",
+"journal ref",
+false
+],
+[
+"ATLAS:2025dkv",
+"ATLAS:2024vdo",
+"title",
+true
+],
+[
+"ATLAS:2025dkv",
+"Bols:2020bkb",
+"journal ref",
+true
+],
+[
+"ATLAS:2025dkv",
+"Levy:2005ns",
+"journal ref",
+false
+],
+[
+"ATLAS:2025dkv",
+"Qu:2019gqs",
+"title",
+true
+],
+[
+"ATLAS:2026bwj",
+"ATLAS:2022aip",
+"report number",
+true
+],
+[
+"ATLAS:2026bwj",
+"Golonka:2005pn",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2015boj",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2015xst",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2017mpa",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2019uhp",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2022aip",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2024vdo",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"ATLAS:2025dkv",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"Bierlich:2022pfr",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"CMS:2014wdm",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"Elagin:2010aw",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"Ellis:1987xu",
+"",
+true
+],
+[
+"ATLAS:2026jar",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2016neq",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2020azv",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2022aip",
+"report number",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2024vdo",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"ATLAS:2025dkv",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"Bierlich:2022pfr",
+"arXiv ID",
+true
+],
+[
+"ATLAS:2026utg",
+"Ellis:1987xu",
+"journal ref",
+true
+],
+[
+"ATLAS:2026utg",
+"Garcia-Abia:1997nda",
+"journal ref",
+false
+],
+[
+"Achasov:2023gey",
+"Chen:2018cxt",
+"",
+true
+],
+[
+"Achasov:2023gey",
+"Pich:2013lsa",
+"",
+true
+],
+[
+"Altakach:2022ywa",
+"Bullock:1992yt",
+"",
+true
+],
+[
+"BaBar:2007yir",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"BaBar:2012zfq",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"Bellavance:2005rg",
+"D0:2004kke",
+"arXiv ID",
+true
+],
+[
+"Belle-II:2018jsg",
+"ALEPH:2005qgp",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Davidson:2010rw",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Davier:2005xq",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Pich:2013lsa",
+"",
+true
+],
+[
+"Belle-II:2018jsg",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Besjes:2016vhy",
+"ATLAS:2014rzk",
+"journal ref",
+true
+],
+[
+"Bhattacharya:2019clk",
+"CMS:2015pac",
+"DOI",
+true
+],
+[
+"Bhattacharya:2019clk",
+"CMS:2018jrd",
+"DOI",
+true
+],
+[
+"Bianchini:2014vza",
+"Bullock:1992yt",
+"journal ref",
+true
+],
+[
+"Bianchini:2014vza",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"Bianchini:2014vza",
+"Elagin:2010aw",
+"journal ref",
+true
+],
+[
+"Bianchini:2014vza",
+"Ellis:1987xu",
+"journal ref",
+true
+],
+[
+"Bianchini:2014vza",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"Bianchini:2014vza",
+"Raychaudhuri:1995kv",
+"journal ref",
+true
+],
+[
+"Bierlich:2022pfr",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Bodrov:2024wrw",
+"Achasov:2023gey",
+"arXiv ID",
+true
+],
+[
+"Bodrov:2024wrw",
+"Belle-II:2018jsg",
+"journal ref",
+true
+],
+[
+"Bodrov:2024wrw",
+"Chen:2018cxt",
+"arXiv ID",
+true
+],
+[
+"Bodrov:2024wrw",
+"Davier:2005xq",
+"arXiv ID",
+true
+],
+[
+"Bullock:1991fd",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"Bullock:1991fd",
+"Tsai:1971vv",
+"journal ref",
+false
+],
+[
+"Bullock:1992yt",
+"Bullock:1991fd",
+"journal ref",
+true
+],
+[
+"Bullock:1992yt",
+"CDF:1991mse",
+"journal ref",
+false
+],
+[
+"Bullock:1992yt",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"Bullock:1992yt",
+"Roy:1991sf",
+"journal ref",
+true
+],
+[
+"Bullock:1992yt",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Bullock:1992yt",
+"UA1:1986okn",
+"journal ref",
+true
+],
+[
+"CDF:1991mse",
+"UA2:1991aom",
+"",
+true
+],
+[
+"CDF:2007tmt",
+"CDF:2005hun",
+"journal ref",
+true
+],
+[
+"CDF:2007tmt",
+"D0:2004kke",
+"",
+true
+],
+[
+"CMS:2009nxa",
+"CDF:2007tmt",
+"journal ref",
+true
+],
+[
+"CMS:2009nxa",
+"CMS:2008dex",
+"report number",
+true
+],
+[
+"CMS:2010yta",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"CMS:2010yta",
+"CMS:2008dex",
+"report number",
+true
+],
+[
+"CMS:2010yta",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"CMS:2011eio",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"CMS:2011eio",
+"CMS:2011ltz",
+"arXiv ID",
+true
+],
+[
+"CMS:2011eio",
+"Jadach:1993hs",
+"DOI",
+true
+],
+[
+"CMS:2011ltz",
+"CDF:2007tmt",
+"",
+true
+],
+[
+"CMS:2011ltz",
+"D0:2008mwg",
+"",
+true
+],
+[
+"CMS:2011ltz",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"CMS:2011msa",
+"CMS:2010yta",
+"report number",
+true
+],
+[
+"CMS:2014wdm",
+"Bullock:1992yt",
+"title",
+true
+],
+[
+"CMS:2014wdm",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"CMS:2014wdm",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2014wdm",
+"CMS:2011ltz",
+"arXiv ID",
+true
+],
+[
+"CMS:2014wdm",
+"Ellis:1987xu",
+"",
+true
+],
+[
+"CMS:2014wdm",
+"Jadach:1990mz",
+"title",
+true
+],
+[
+"CMS:2015pac",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"CMS:2015pac",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"CMS:2015pac",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"CMS:2015pac",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2015pac",
+"CMS:2011ltz",
+"arXiv ID",
+true
+],
+[
+"CMS:2015pac",
+"CMS:2014wdm",
+"arXiv ID",
+true
+],
+[
+"CMS:2015pac",
+"Jadach:1993hs",
+"DOI",
+true
+],
+[
+"CMS:2016gvn",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"CMS:2016gvn",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2016gvn",
+"CMS:2011ltz",
+"arXiv ID",
+true
+],
+[
+"CMS:2016gvn",
+"CMS:2014wdm",
+"arXiv ID",
+true
+],
+[
+"CMS:2016gvn",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"CMS:2017zyp",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"CMS:2017zyp",
+"ATLAS:2016neq",
+"arXiv ID",
+true
+],
+[
+"CMS:2017zyp",
+"Bianchini:2014vza",
+"DOI",
+true
+],
+[
+"CMS:2017zyp",
+"CMS:2014wdm",
+"arXiv ID",
+true
+],
+[
+"CMS:2017zyp",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"CMS:2017zyp",
+"CMS:2016gvn",
+"report number",
+true
+],
+[
+"CMS:2018jrd",
+"ATLAS:2016neq",
+"arXiv ID",
+true
+],
+[
+"CMS:2018jrd",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2018jrd",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"CMS:2018jrd",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2018rmh",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"CMS:2018rmh",
+"CMS:2014wdm",
+"",
+true
+],
+[
+"CMS:2018rmh",
+"CMS:2015pac",
+"",
+true
+],
+[
+"CMS:2018rmh",
+"CMS:2016gvn",
+"",
+true
+],
+[
+"CMS:2019pkt",
+"ATLAS:2015xst",
+"",
+true
+],
+[
+"CMS:2019pkt",
+"CMS:2014wdm",
+"",
+true
+],
+[
+"CMS:2019pkt",
+"CMS:2015pac",
+"",
+true
+],
+[
+"CMS:2019pkt",
+"CMS:2018jrd",
+"",
+true
+],
+[
+"CMS:2019pkt",
+"CMS:2018rmh",
+"",
+true
+],
+[
+"CMS:2020cmk",
+"CMS:2017zyp",
+"",
+true
+],
+[
+"CMS:2020cmk",
+"CMS:2018jrd",
+"",
+true
+],
+[
+"CMS:2021rsq",
+"CMS:2015pac",
+"",
+true
+],
+[
+"CMS:2021rsq",
+"CMS:2017zyp",
+"",
+true
+],
+[
+"CMS:2021rsq",
+"CMS:2018jrd",
+"",
+true
+],
+[
+"CMS:2021rsq",
+"CMS:2019pkt",
+"",
+true
+],
+[
+"CMS:2021rsq",
+"CMS:2020cmk",
+"",
+true
+],
+[
+"CMS:2021rsq",
+"Ellis:1987xu",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"ATLAS:2018ynr",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"Bianchini:2014vza",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"CMS:2017zyp",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"CMS:2018jrd",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"CMS:2019pkt",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"CMS:2020cmk",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"CMS:2022prd",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"CMS:2021sdq",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"CMS:2022prd",
+"ATLAS:2014rzk",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"ATLAS:2018gfm",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"ATLAS:2019uhp",
+"report number",
+true
+],
+[
+"CMS:2022prd",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"Bols:2020bkb",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"CMS:2018rmh",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"CMS:2022prd",
+"Innocente:1992gq",
+"DOI",
+true
+],
+[
+"CMS:2025kgf",
+"ATLAS:2018gfm",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2018rmh",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"CMS:2025kgf",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"ATLAS:2018gfm",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2018rmh",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"CMS:2025txq",
+"CMS:2025kgf",
+"title",
+false
+],
+[
+"CMS:2025txq",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"ATLAS:2017xuc",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"ATLAS:2018gfm",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2018rmh",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"CMS:2025xio",
+"ParticleDataGroup:2024cfk",
+"DOI",
+true
+],
+[
+"CMS:2026zoh",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"ATLAS:2019gti",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"ATLAS:2022akr",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"Bierlich:2022pfr",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"Bols:2020bkb",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2018rmh",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2025kgf",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"CMS:2026zzq",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"Kalinowski:2025vci",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zoh",
+"ParticleDataGroup:2024cfk",
+"DOI",
+true
+],
+[
+"CMS:2026zzq",
+"ATLAS:2017xuc",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2011eio",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"CMS:2025kgf",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"Davidson:2010rw",
+"arXiv ID",
+true
+],
+[
+"CMS:2026zzq",
+"ParticleDataGroup:2024cfk",
+"DOI",
+true
+],
+[
+"CMS:DP-2025-047",
+"CMS:2018jrd",
+"DOI",
+false
+],
+[
+"CMS:DP-2025-047",
+"CMS:2022prd",
+"title",
+false
+],
+[
+"CMS:DP-2025-047",
+"CMS:2025kgf",
+"title",
+false
+],
+[
+"CMS:DP-2025-047",
+"CMS:2025txq",
+"report number",
+false
+],
+[
+"Cardini:2025zbp",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"Cardini:2025zbp",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"Cardini:2025zbp",
+"CMS:2020cmk",
+"arXiv ID",
+true
+],
+[
+"Cardini:2025zbp",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"Cardini:2025zbp",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"Cardini:2025zbp",
+"CMS:2025kgf",
+"arXiv ID",
+true
+],
+[
+"Cardini:2025zbp",
+"CMS:2025xio",
+"report number",
+false
+],
+[
+"Cardini:2025zbp",
+"CMS:DP-2025-047",
+"title",
+false
+],
+[
+"Cardini:2025zbp",
+"Qu:2019gqs",
+"DOI",
+true
+],
+[
+"Cardini:2025zbp",
+"Qu:2022mxj",
+"arXiv ID",
+true
+],
+[
+"Chakraborty:2023dhw",
+"Bullock:1992yt",
+"title",
+true
+],
+[
+"Chakraborty:2023dhw",
+"Katz:2010iq",
+"arXiv ID",
+true
+],
+[
+"Chen:2018cxt",
+"Jadach:1990mz",
+"title",
+true
+],
+[
+"Chen:2018cxt",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Choudhury:2021vqb",
+"CMS:2018jrd",
+"title",
+true
+],
+[
+"Czyczula:2012ny",
+"Davidson:2010rw",
+"",
+true
+],
+[
+"Czyczula:2012ny",
+"Hagiwara:1989fn",
+"",
+true
+],
+[
+"Czyczula:2012ny",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Czyczula:2012ny",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"D0:2004kke",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"D0:2008mwg",
+"CDF:2007tmt",
+"journal ref",
+true
+],
+[
+"D0:2008mwg",
+"D0:2004kke",
+"",
+true
+],
+[
+"D0:2009puk",
+"D0:2008mwg",
+"",
+true
+],
+[
+"DELPHI:1999yne",
+"Bullock:1992yt",
+"journal ref",
+true
+],
+[
+"DELPHI:1999yne",
+"Davier:1992nw",
+"journal ref",
+true
+],
+[
+"DELPHI:1999yne",
+"L3:1998oan",
+"journal ref",
+true
+],
+[
+"DELPHI:2003djq",
+"ALEPH:1995hnf",
+"journal ref",
+true
+],
+[
+"DELPHI:2003djq",
+"DELPHI:1999yne",
+"journal ref",
+true
+],
+[
+"DELPHI:2003djq",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"DELPHI:2003djq",
+"L3:1994hjr",
+"",
+true
+],
+[
+"DELPHI:2003djq",
+"OPAL:1997lbr",
+"journal ref",
+true
+],
+[
+"DELPHI:2003djq",
+"Perl:1975bf",
+"journal ref",
+true
+],
+[
+"DELPHI:2003djq",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"DONUT:2000fbd",
+"Perl:1975bf",
+"",
+true
+],
+[
+"Dam:2018rfz",
+"ALEPH:2001uca",
+"journal ref",
+false
+],
+[
+"Dam:2018rfz",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"Dam:2018rfz",
+"ALEPH:2005qgp",
+"",
+true
+],
+[
+"Dam:2018rfz",
+"Belle-II:2018jsg",
+"",
+true
+],
+[
+"Dam:2018rfz",
+"L3:2000dya",
+"",
+true
+],
+[
+"Dam:2018rfz",
+"OPAL:1998lid",
+"",
+true
+],
+[
+"Dam:2018rfz",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Davidson:2010rw",
+"ALEPH:2001uca",
+"",
+true
+],
+[
+"Davidson:2010rw",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Davidson:2010rw",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Davier:1992nw",
+"Jadach:1990mz",
+"journal ref",
+true
+],
+[
+"Davier:1992nw",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Davier:2005xq",
+"ALEPH:1995hnf",
+"",
+true
+],
+[
+"Davier:2005xq",
+"ALEPH:1995nob",
+"",
+true
+],
+[
+"Davier:2005xq",
+"ALEPH:2005qgp",
+"",
+true
+],
+[
+"Davier:2005xq",
+"OPAL:1997lbr",
+"",
+true
+],
+[
+"Davier:2005xq",
+"OPAL:1998lid",
+"",
+true
+],
+[
+"Deliot:2005ta",
+"D0:2004kke",
+"journal ref",
+true
+],
+[
+"Eads:2005nh",
+"D0:2004kke",
+"journal ref",
+true
+],
+[
+"Ehataht:2023zzt",
+"Altakach:2022ywa",
+"",
+true
+],
+[
+"Ehataht:2023zzt",
+"Belle-II:2018jsg",
+"",
+true
+],
+[
+"Ehataht:2023zzt",
+"Bierlich:2022pfr",
+"",
+true
+],
+[
+"Ehataht:2023zzt",
+"Davier:1992nw",
+"",
+true
+],
+[
+"Ehataht:2023zzt",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Eigen:2019ndm",
+"Belle-II:2018jsg",
+"arXiv ID",
+true
+],
+[
+"Eigen:2019ndm",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Elagin:2010aw",
+"CDF:2007tmt",
+"journal ref",
+true
+],
+[
+"Elagin:2010aw",
+"CMS:2008dex",
+"report number",
+true
+],
+[
+"Elagin:2010aw",
+"Ellis:1987xu",
+"journal ref",
+true
+],
+[
+"Elagin:2010aw",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Ellis:1987xu",
+"UA1:1986okn",
+"",
+true
+],
+[
+"Flechl:2017bse",
+"ATLAS:2011tfa",
+"title",
+false
+],
+[
+"Flechl:2017bse",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"Flechl:2017bse",
+"ATLAS:2015xbi",
+"report number",
+true
+],
+[
+"Flechl:2017bse",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"Flechl:2017bse",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"Flechl:2017bse",
+"CMS:2016gvn",
+"report number",
+true
+],
+[
+"Friedrich:2012xr",
+"ATLAS:2011ohj",
+"arXiv ID",
+true
+],
+[
+"Friedrich:2012xr",
+"ATLAS:2011oka",
+"report number",
+false
+],
+[
+"Gallinaro:2026djh",
+"CMS:2022prd",
+"title",
+false
+],
+[
+"Gallinaro:2026djh",
+"Muennich:2010TauFinder",
+"title",
+false
+],
+[
+"Gallinaro:2026djh",
+"ParticleDataGroup:2024cfk",
+"journal ref",
+false
+],
+[
+"Garcia-Abia:1997nda",
+"Davier:1992nw",
+"",
+true
+],
+[
+"Garcia-Abia:1997nda",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"Garcia-Abia:1997nda",
+"OPAL:1996krj",
+"journal ref",
+true
+],
+[
+"Giagu:2022gmq",
+"ALEPH:2001uca",
+"DOI",
+true
+],
+[
+"Giagu:2022gmq",
+"ATLAS:2014rzk",
+"DOI",
+true
+],
+[
+"Giagu:2022gmq",
+"ATLAS:2017xuc",
+"DOI",
+true
+],
+[
+"Giagu:2022gmq",
+"CMS:2015pac",
+"arXiv ID",
+false
+],
+[
+"Giagu:2022gmq",
+"CMS:2018jrd",
+"DOI",
+true
+],
+[
+"Giagu:2022gmq",
+"Dam:2018rfz",
+"DOI",
+true
+],
+[
+"Giagu:2022gmq",
+"Innocente:1992gq",
+"journal ref",
+true
+],
+[
+"Giagu:2022gmq",
+"Levy:2005ns",
+"",
+true
+],
+[
+"Giagu:2022gmq",
+"Qu:2019gqs",
+"DOI",
+true
+],
+[
+"Giappichini:2026vlg",
+"ATLAS:2016neq",
+"title",
+true
+],
+[
+"Giappichini:2026vlg",
+"Bierlich:2022pfr",
+"DOI",
+true
+],
+[
+"Giappichini:2026vlg",
+"CMS:2017zyp",
+"title",
+true
+],
+[
+"Giappichini:2026vlg",
+"Qu:2019gqs",
+"title",
+true
+],
+[
+"Gosdzik:2010bj",
+"ATLAS:2010tba",
+"report number",
+false
+],
+[
+"H1:2006wzo",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"H1:2006wzo",
+"ZEUS:2003nmf",
+"",
+true
+],
+[
+"Hagiwara:1989fn",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Heldmann:2005zda",
+"Richter-Was:2004hwa",
+"report number",
+true
+],
+[
+"HernandezVillanueva:2018dqu",
+"Belle-II:2018jsg",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"ATLAS:2018ynr",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"ATLAS:2019uhp",
+"report number",
+false
+],
+[
+"Huang:2023ssr",
+"CMS:2017zyp",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"CMS:2018rmh",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"Huang:2023ssr",
+"Qu:2022mxj",
+"arXiv ID",
+true
+],
+[
+"Ilten:2012zb",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Jadach:1990mz",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Jadach:1993hs",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Jaros:1983uq",
+"Feldman:1981md",
+"",
+true
+],
+[
+"Kalinowski:2025vci",
+"ATLAS:2020zms",
+"title",
+true
+],
+[
+"Kalinowski:2025vci",
+"ATLAS:2022akr",
+"DOI",
+true
+],
+[
+"Kalinowski:2025vci",
+"Bierlich:2022pfr",
+"arXiv ID",
+true
+],
+[
+"Kalinowski:2025vci",
+"CMS:2021sdq",
+"DOI",
+true
+],
+[
+"Kalinowski:2025vci",
+"Elagin:2010aw",
+"DOI",
+true
+],
+[
+"Kalinowski:2025vci",
+"Ellis:1987xu",
+"DOI",
+true
+],
+[
+"Katz:2010iq",
+"CMS:2008dex",
+"report number",
+false
+],
+[
+"Katz:2010iq",
+"Ellis:1987xu",
+"journal ref",
+true
+],
+[
+"Katz:2010iq",
+"Heldmann:2005zda",
+"report number",
+false
+],
+[
+"Katz:2010iq",
+"Richter-Was:2004hwa",
+"report number",
+false
+],
+[
+"Kianian:2026jpl",
+"Muennich:2010TauFinder",
+"title",
+false
+],
+[
+"Kormos:2002mg",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Kormos:2002mg",
+"OPAL:1998lid",
+"journal ref",
+true
+],
+[
+"Kormos:2002mg",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"L3:1994hjr",
+"ARGUS:1992olh",
+"",
+true
+],
+[
+"L3:1994hjr",
+"Innocente:1992gq",
+"journal ref",
+true
+],
+[
+"L3:1994hjr",
+"Perl:1975bf",
+"journal ref",
+true
+],
+[
+"L3:1998oan",
+"Davier:1992nw",
+"journal ref",
+true
+],
+[
+"L3:1998oan",
+"Hagiwara:1989fn",
+"",
+true
+],
+[
+"L3:1998oan",
+"OPAL:1996krj",
+"journal ref",
+true
+],
+[
+"L3:1998oan",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"L3:2000dya",
+"OPAL:1998lid",
+"journal ref",
+true
+],
+[
+"LHCb:2012qfr",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"LHCb:2012qfr",
+"ATLAS:2011ohj",
+"",
+true
+],
+[
+"LHCb:2012qfr",
+"CMS:2011ltz",
+"",
+true
+],
+[
+"LHCb:2014kws",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"LHCb:2017rln",
+"Davidson:2010rw",
+"",
+true
+],
+[
+"LHCb:2017rln",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"LHCb:2017rln",
+"LHCb:2017smo",
+"",
+true
+],
+[
+"LHCb:2017smo",
+"Davidson:2010rw",
+"",
+true
+],
+[
+"LHCb:2017smo",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"LHCb:2017smo",
+"LHCb:2017rln",
+"",
+true
+],
+[
+"LHCb:2018ogb",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"LHCb:2018ogb",
+"CMS:2011ltz",
+"",
+true
+],
+[
+"LHCb:2018ogb",
+"Golonka:2005pn",
+"",
+true
+],
+[
+"LHCb:2018ogb",
+"LHCb:2012qfr",
+"",
+true
+],
+[
+"Lafferty:2006nn",
+"ALEPH:2005qgp",
+"journal ref",
+true
+],
+[
+"Lafferty:2006nn",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"Lai:2008rt",
+"ATLAS:2009xfe",
+"title",
+false
+],
+[
+"Lai:2011sc",
+"ATLAS:2011tfa",
+"report number",
+false
+],
+[
+"Lai:2011sc",
+"ATLAS:2011zia",
+"report number",
+false
+],
+[
+"Lange:2023gbe",
+"ALEPH:2001uca",
+"arXiv ID",
+false
+],
+[
+"Lange:2023gbe",
+"ATLAS:2010tba",
+"title",
+false
+],
+[
+"Lange:2023gbe",
+"ATLAS:2015boj",
+"arXiv ID",
+false
+],
+[
+"Lange:2023gbe",
+"ATLAS:2015xst",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"ATLAS:2018gfm",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"ATLAS:2019gti",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"ATLAS:2020zms",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"ATLAS:2022aip",
+"title",
+false
+],
+[
+"Lange:2023gbe",
+"Abramowicz:2016zbo",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"Bierlich:2022pfr",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"CMS:2008dex",
+"title",
+false
+],
+[
+"Lange:2023gbe",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"CMS:2018jrd",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"CMS:2021sdq",
+"arXiv ID",
+false
+],
+[
+"Lange:2023gbe",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"DELPHI:1999yne",
+"DOI",
+false
+],
+[
+"Lange:2023gbe",
+"Dam:2018rfz",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"Elagin:2010aw",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"Giagu:2022gmq",
+"DOI",
+true
+],
+[
+"Lange:2023gbe",
+"L3:1998oan",
+"DOI",
+false
+],
+[
+"Lange:2023gbe",
+"Muennich:2010TauFinder",
+"title",
+false
+],
+[
+"Lange:2023gbe",
+"Qu:2019gqs",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"Qu:2022mxj",
+"arXiv ID",
+true
+],
+[
+"Lange:2023gbe",
+"Tran:2015nxa",
+"arXiv ID",
+true
+],
+[
+"Levy:2005ns",
+"CDF:2005hun",
+"",
+true
+],
+[
+"Levy:2005ns",
+"D0:2004kke",
+"",
+true
+],
+[
+"Madar:2010pn",
+"D0:2008mwg",
+"journal ref",
+true
+],
+[
+"Matorras:2002yx",
+"Davier:1992nw",
+"",
+true
+],
+[
+"Matorras:2002yx",
+"L3:2000dya",
+"",
+true
+],
+[
+"Motta:2024sqf",
+"Duarte:2018ite",
+"title",
+true
+],
+[
+"Motta:2024sqf",
+"Zabi:2020gjd",
+"report number",
+true
+],
+[
+"Nayak:2012uaq",
+"CMS:2009nxa",
+"report number",
+true
+],
+[
+"Nayak:2012uaq",
+"CMS:2011eio",
+"title",
+true
+],
+[
+"OPAL:1996krj",
+"ALEPH:1995hnf",
+"journal ref",
+true
+],
+[
+"OPAL:1996krj",
+"ALEPH:1995nob",
+"journal ref",
+true
+],
+[
+"OPAL:1996krj",
+"ARGUS:1992olh",
+"",
+true
+],
+[
+"OPAL:1996krj",
+"Davier:1992nw",
+"",
+true
+],
+[
+"OPAL:1996krj",
+"Jadach:1990mz",
+"journal ref",
+true
+],
+[
+"OPAL:1997lbr",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"OPAL:1997lbr",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"OPAL:1998lid",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"OPAL:1998lid",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Oberhof:2015hea",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"Ordek:2019vrf",
+"ATLAS:2017hlo",
+"report number",
+true
+],
+[
+"Ordek:2019vrf",
+"ATLAS:2017mpa",
+"report number",
+true
+],
+[
+"Ordek:2019vrf",
+"ATLAS:2018ynr",
+"title",
+true
+],
+[
+"Ordek:2019vrf",
+"ATLAS:2019gti",
+"title",
+false
+],
+[
+"Ordek:2019vrf",
+"ATLAS:2019uhp",
+"report number",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ALEPH:2005qgp",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ARGUS:1990zee",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ARGUS:1992olh",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2016neq",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2018gfm",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2018ynr",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2019gti",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2020azv",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2020zms",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"ATLAS:2022akr",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Belle-II:2018jsg",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Bierlich:2022pfr",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Bols:2020bkb",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"CDF:2005hun",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"CMS:2017zyp",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"CMS:2018rmh",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"CMS:2021rsq",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"CMS:2021sdq",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"DELPHI:2003djq",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Davier:1992nw",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Duarte:2018ite",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"OPERA:2018nar",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Pich:2013lsa",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Qu:2019gqs",
+"",
+true
+],
+[
+"ParticleDataGroup:2024cfk",
+"Stahl:2000aq",
+"",
+true
+],
+[
+"Patwa:2006rd",
+"D0:2004kke",
+"journal ref",
+true
+],
+[
+"Perl:1975bf",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Perl:1977se",
+"Perl:1975bf",
+"",
+true
+],
+[
+"Perl:1977se",
+"Thacker:1971hy",
+"",
+true
+],
+[
+"Perl:1977se",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Perl:1979pb",
+"Perl:1975bf",
+"",
+true
+],
+[
+"Perl:1979pb",
+"Perl:1977se",
+"",
+true
+],
+[
+"Perl:1979pb",
+"Thacker:1971hy",
+"",
+true
+],
+[
+"Perl:1979pb",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Pianori:2011jj",
+"D0:2008mwg",
+"journal ref",
+true
+],
+[
+"Pich:2013lsa",
+"ALEPH:2005ab",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"ALEPH:2005qgp",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"ARGUS:1990zee",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"ARGUS:1992olh",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"ATLAS:2011ohj",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"ATLAS:2011pse",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"BaBar:2012zfq",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"CDF:1991mse",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"CDF:2007tmt",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"CMS:2011ltz",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"D0:2008mwg",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"DONUT:2000fbd",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Davier:1992nw",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Davier:2005xq",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Hagiwara:1989fn",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Jadach:1993hs",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"LHCb:2012qfr",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Perl:1975bf",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Perl:1979pb",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Thacker:1971hy",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"Tsai:1971vv",
+"",
+true
+],
+[
+"Pich:2013lsa",
+"UA1:1986okn",
+"",
+true
+],
+[
+"Qu:2022mxj",
+"Qu:2019gqs",
+"title",
+true
+],
+[
+"Raychaudhuri:1995cc",
+"Bullock:1991fd",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995cc",
+"Bullock:1992yt",
+"",
+true
+],
+[
+"Raychaudhuri:1995cc",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995cc",
+"Roy:1991sf",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995cc",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995kv",
+"Bullock:1991fd",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995kv",
+"Bullock:1992yt",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995kv",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995kv",
+"Roy:1991sf",
+"journal ref",
+true
+],
+[
+"Raychaudhuri:1995kv",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Roy:1991sf",
+"Hagiwara:1989fn",
+"journal ref",
+true
+],
+[
+"Sakurai:2014kha",
+"ATLAS:2013uma",
+"report number",
+true
+],
+[
+"Sarkar:2025vcs",
+"CMS:2022prd",
+"DOI",
+true
+],
+[
+"Sarkar:2025vcs",
+"Qu:2019gqs",
+"DOI",
+true
+],
+[
+"Sarkar:2025vcs",
+"Qu:2022mxj",
+"arXiv ID",
+true
+],
+[
+"Seeba:2025vvp",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"Seeba:2025vvp",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"Seeba:2025vvp",
+"Lange:2023gbe",
+"arXiv ID",
+true
+],
+[
+"Seeba:2025vvp",
+"Qu:2022mxj",
+"title",
+false
+],
+[
+"Seeba:2025vvp",
+"Tani:2024qzm",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"ATLAS:2022aip",
+"title",
+false
+],
+[
+"Seeba:2026jyf",
+"Bierlich:2022pfr",
+"DOI",
+true
+],
+[
+"Seeba:2026jyf",
+"CMS:2011eio",
+"title",
+false
+],
+[
+"Seeba:2026jyf",
+"CMS:2014wdm",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"CMS:2015pac",
+"title",
+false
+],
+[
+"Seeba:2026jyf",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"CMS:DP-2025-047",
+"title",
+false
+],
+[
+"Seeba:2026jyf",
+"Cardini:2025zbp",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Dam:2018rfz",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Elagin:2010aw",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Gallinaro:2026djh",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Lange:2023gbe",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Muennich:2010TauFinder",
+"title",
+false
+],
+[
+"Seeba:2026jyf",
+"Qu:2019gqs",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Qu:2022mxj",
+"arXiv ID",
+true
+],
+[
+"Seeba:2026jyf",
+"Tani:2024qzm",
+"title",
+false
+],
+[
+"Stahl:2000aq",
+"DONUT:2000fbd",
+"title",
+false
+],
+[
+"Stahl:2000aq",
+"Perl:1975bf",
+"title",
+true
+],
+[
+"Stahl:2000aq",
+"Perl:1977se",
+"",
+true
+],
+[
+"Stahl:2000aq",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Stugu:1998jv",
+"ALEPH:1995nob",
+"journal ref",
+true
+],
+[
+"Tamir:2023aiz",
+"ATLAS:2020azv",
+"arXiv ID",
+true
+],
+[
+"Tamir:2023aiz",
+"Yaary:2023dvw",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"ALEPH:2001uca",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"ALEPH:2005qgp",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"ATLAS:2015boj",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"ATLAS:2017mpa",
+"report number",
+false
+],
+[
+"Tani:2024qzm",
+"ATLAS:2017xuc",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"ATLAS:2019uhp",
+"title",
+false
+],
+[
+"Tani:2024qzm",
+"ATLAS:2022aip",
+"title",
+false
+],
+[
+"Tani:2024qzm",
+"ATLAS:2022akr",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Abramowicz:2016zbo",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Bierlich:2022pfr",
+"DOI",
+true
+],
+[
+"Tani:2024qzm",
+"CMS:2011eio",
+"title",
+true
+],
+[
+"Tani:2024qzm",
+"CMS:2015pac",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"CMS:2021rsq",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"CMS:2021sdq",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"CMS:2022prd",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Dam:2018rfz",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Giagu:2022gmq",
+"title",
+false
+],
+[
+"Tani:2024qzm",
+"Huang:2023ssr",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Lange:2023gbe",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Motta:2024sqf",
+"DOI",
+true
+],
+[
+"Tani:2024qzm",
+"Qu:2022mxj",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Tamir:2023aiz",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Tran:2015nxa",
+"arXiv ID",
+true
+],
+[
+"Tani:2024qzm",
+"Yaary:2023dvw",
+"arXiv ID",
+true
+],
+[
+"Tani:2025osu",
+"Lange:2023gbe",
+"DOI",
+true
+],
+[
+"Tani:2025osu",
+"Qu:2022mxj",
+"title",
+true
+],
+[
+"Tani:2025osu",
+"Tani:2024qzm",
+"arXiv ID",
+true
+],
+[
+"Tani:2025osu",
+"Tran:2015nxa",
+"DOI",
+true
+],
+[
+"TeV4LHCWorkingGroup:2006qvb",
+"D0:2004kke",
+"arXiv ID",
+true
+],
+[
+"TeV4LHCWorkingGroup:2006qvb",
+"Heldmann:2005zda",
+"report number",
+false
+],
+[
+"Tran:2015nxa",
+"ALEPH:2001uca",
+"journal ref",
+true
+],
+[
+"Tran:2015nxa",
+"Jadach:1990mz",
+"journal ref",
+true
+],
+[
+"Tsai:1971vv",
+"Thacker:1971hy",
+"",
+true
+],
+[
+"UA1:1986okn",
+"Jaros:1983uq",
+"",
+true
+],
+[
+"UA1:1986okn",
+"Perl:1975bf",
+"",
+true
+],
+[
+"UA1:1986okn",
+"Perl:1979pb",
+"",
+true
+],
+[
+"UA2:1991aom",
+"UA1:1986okn",
+"",
+true
+],
+[
+"Urheim:1994yq",
+"Jadach:1990mz",
+"journal ref",
+true
+],
+[
+"Urheim:1994yq",
+"Jadach:1993hs",
+"journal ref",
+true
+],
+[
+"Urheim:1994yq",
+"Tsai:1971vv",
+"journal ref",
+true
+],
+[
+"Yaary:2023dvw",
+"CMS:2022prd",
+"title",
+true
+],
+[
+"Yaary:2023dvw",
+"Davier:2005xq",
+"title",
+true
+],
+[
+"Yaary:2023dvw",
+"Duarte:2018ite",
+"title",
+true
+],
+[
+"ZEUS:2003nmf",
+"Jadach:1990mz",
+"",
+true
+],
+[
+"Zabi:2020gjd",
+"CMS:2017zyp",
+"",
+true
+],
+[
+"Zabi:2020gjd",
+"CMS:2018jrd",
+"",
+true
+],
+[
+"Zabi:2020gjd",
+"Duarte:2018ite",
+"",
+true
+],
+[
+"Zhang:2006iu",
+"ALEPH:2005qgp",
+"journal ref",
+true
+],
+[
+"Zhang:2006iu",
+"Davier:2005xq",
+"arXiv ID",
+true
+],
+[
+"Zinonos:2014rma",
+"ATLAS:2013qgs",
+"report number",
+true
+]
+],
+"coverage": {
+"Lai:2008rt": "pdf+inspire",
+"Gosdzik:2010bj": "pdf+inspire",
+"Lai:2011sc": "pdf+inspire",
+"Friedrich:2012xr": "pdf+inspire",
+"Zinonos:2014rma": "pdf+inspire",
+"Sakurai:2014kha": "pdf+inspire",
+"ATLAS:2014rzk": "pdf+inspire",
+"ATLAS:2015boj": "pdf+inspire",
+"Besjes:2016vhy": "pdf+inspire",
+"Flechl:2017bse": "pdf+inspire",
+"Ordek:2019vrf": "pdf+inspire",
+"ATLAS:2020azv": "pdf+inspire",
+"ATLAS:2024vdo": "pdf+inspire",
+"ATLAS:2024lbg": "pdf+inspire",
+"ATLAS:2024jgt": "pdf+inspire",
+"ATLAS:2026utg": "pdf+inspire",
+"CMS:2011eio": "pdf+inspire",
+"Nayak:2012uaq": "pdf+inspire",
+"CMS:2015pac": "pdf+inspire",
+"CMS:2018jrd": "pdf+inspire",
+"Bhattacharya:2019clk": "pdf+inspire",
+"Choudhury:2021vqb": "pdf+inspire",
+"CMS:2022prd": "pdf+inspire",
+"Motta:2024sqf": "pdf+inspire",
+"CMS:2025kgf": "pdf+inspire",
+"Cardini:2025zbp": "pdf+inspire",
+"Sarkar:2025vcs": "pdf+inspire",
+"CMS:2026zzq": "pdf+inspire",
+"Levy:2005ns": "pdf+inspire",
+"TeV4LHCWorkingGroup:2006qvb": "pdf+inspire",
+"Madar:2010pn": "pdf+inspire",
+"CDF:2003gms": "pdf+inspire",
+"Connolly:2002yn": "pdf+inspire",
+"Deliot:2005ta": "pdf+inspire",
+"Bellavance:2005rg": "pdf+inspire",
+"Eads:2005nh": "pdf+inspire",
+"Patwa:2006rd": "pdf+inspire",
+"D0:2004kke": "pdf+inspire",
+"D0:2008mwg": "pdf+inspire",
+"CDF:2007tmt": "pdf+inspire",
+"D0:2009puk": "pdf+inspire",
+"Pianori:2011jj": "pdf+inspire",
+"Scanlon:2011in": "pdf+inspire",
+"ALEPH:1995nob": "pdf+inspire",
+"ALEPH:1995hnf": "pdf+inspire",
+"ALEPH:2001uca": "pdf+inspire",
+"ALEPH:2005qgp": "pdf+inspire",
+"DELPHI:1999yne": "pdf+inspire",
+"DELPHI:2003djq": "pdf+inspire",
+"Innocente:1992gq": "pdf+inspire",
+"L3:1994hjr": "pdf+inspire",
+"L3:1998oan": "pdf+inspire",
+"L3:2000dya": "pdf+inspire",
+"OPAL:1997lbr": "pdf+inspire",
+"OPAL:1998lid": "pdf+inspire",
+"Kormos:2002mg": "pdf+inspire",
+"OPAL:1996krj": "pdf+inspire",
+"Garcia-Abia:1997nda": "pdf+inspire",
+"Etzion:1997dk": "pdf+inspire",
+"Stugu:1998jv": "pdf+inspire",
+"Matorras:2002yx": "pdf+inspire",
+"ALEPH:2005ab": "pdf+inspire",
+"Zhang:2006iu": "pdf+inspire",
+"Urheim:1994yq": "pdf+inspire",
+"Lafferty:2006nn": "pdf+inspire",
+"BaBar:2007yir": "pdf+inspire",
+"BaBar:2012zfq": "pdf+inspire",
+"Oberhof:2015hea": "pdf+inspire",
+"HernandezVillanueva:2018dqu": "pdf+inspire",
+"Eigen:2019ndm": "pdf+inspire",
+"Bodrov:2024wrw": "pdf+inspire",
+"Chen:2018cxt": "pdf+inspire",
+"Katz:2010iq": "pdf+inspire",
+"Tran:2015nxa": "pdf+inspire",
+"Giagu:2022gmq": "pdf+inspire",
+"Huang:2023ssr": "pdf+inspire",
+"Yaary:2023dvw": "pdf+inspire",
+"Lange:2023gbe": "pdf+inspire",
+"Tamir:2023aiz": "pdf+inspire",
+"Tani:2024qzm": "pdf+inspire",
+"Seeba:2025vvp": "pdf+inspire",
+"Tani:2025osu": "pdf+inspire",
+"Gallinaro:2026djh": "pdf+inspire",
+"Giappichini:2026vlg": "pdf+inspire",
+"Seeba:2026jyf": "pdf+inspire",
+"Kianian:2026jpl": "pdf+inspire",
+"Bullock:1991fd": "pdf+inspire",
+"Roy:1991sf": "pdf+inspire",
+"Bullock:1992yt": "pdf+inspire",
+"Davier:1992nw": "pdf+inspire",
+"Raychaudhuri:1995kv": "pdf+inspire",
+"Raychaudhuri:1995cc": "pdf+inspire",
+"Ellis:1987xu": "pdf+inspire",
+"Elagin:2010aw": "pdf+inspire",
+"Bianchini:2014vza": "pdf+inspire",
+"Kalinowski:2025vci": "pdf+inspire",
+"Chakraborty:2023dhw": "pdf+inspire",
+"Hagiwara:1989fn": "pdf+inspire",
+"Tsai:1971vv": "pdf+inspire",
+"Richter-Was:2004hwa": "pdf",
+"Heldmann:2005zda": "pdf+inspire",
+"Oye:2006gea": "pdf",
+"ATLAS:2009xfe": "pdf+inspire",
+"ATLAS:2009yiv": "pdf+inspire",
+"ATLAS:2010kdq": "pdf+inspire",
+"ATLAS:2010maa": "pdf+inspire",
+"ATLAS:2010tba": "pdf+inspire",
+"ATLAS:2010pba": "pdf+inspire",
+"ATLAS:2011tfa": "pdf+inspire",
+"ATLAS:2011zia": "pdf+inspire",
+"ATLAS:2011oka": "pdf+inspire",
+"ATLAS:2012voa": "pdf+inspire",
+"ATLAS:2013uma": "pdf+inspire",
+"ATLAS:2013qgs": "pdf+inspire",
+"ATLAS:2015xbi": "pdf+inspire",
+"ATLAS:2017mpa": "pdf+inspire",
+"ATLAS:2017hlo": "pdf+inspire",
+"ATLAS:2019uhp": "pdf+inspire",
+"ATLAS:2019tjd": "pdf+inspire",
+"ATLAS:2020iwm": "pdf+inspire",
+"ATLAS:2022aip": "pdf+inspire",
+"ATLAS:2026bwj": "pdf+inspire",
+"CMS:2008dex": "pdf",
+"CMS:2009nxa": "pdf+inspire",
+"CMS:2010yta": "pdf+inspire",
+"CMS:2011msa": "pdf+inspire",
+"CMS:2016gvn": "pdf+inspire",
+"CMS:2025txq": "pdf+inspire",
+"CMS:2025xio": "pdf+inspire",
+"CMS:2026zoh": "pdf+inspire",
+"Muennich:2010TauFinder": "pdf",
+"CMS:DP-2017-002": "pdf",
+"CMS:DP-2025-047": "pdf",
+"Perl:1975bf": "inspire",
+"Thacker:1971hy": "inspire",
+"Perl:1977se": "inspire",
+"Perl:1979pb": "inspire",
+"Feldman:1981md": "inspire",
+"Jaros:1983uq": "inspire",
+"ARGUS:1992olh": "inspire",
+"ARGUS:1990zee": "inspire",
+"Pich:2013lsa": "inspire",
+"Davier:2005xq": "inspire",
+"Stahl:2000aq": "pdf+inspire",
+"ParticleDataGroup:2024cfk": "inspire",
+"UA1:1986okn": "inspire",
+"UA2:1991aom": "inspire",
+"CDF:1991mse": "inspire",
+"CDF:2005hun": "inspire",
+"H1:2006wzo": "inspire",
+"ZEUS:2003nmf": "inspire",
+"LHCb:2012qfr": "inspire",
+"LHCb:2018ogb": "inspire",
+"LHCb:2017smo": "inspire",
+"LHCb:2017rln": "inspire",
+"LHCb:2014kws": "inspire",
+"DONUT:2000fbd": "inspire",
+"OPERA:2018nar": "inspire",
+"IceCube:2024nhk": "inspire",
+"Jadach:1990mz": "inspire",
+"Jadach:1993hs": "inspire",
+"Davidson:2010rw": "inspire",
+"Czyczula:2012ny": "inspire",
+"Golonka:2005pn": "inspire",
+"Ilten:2012zb": "inspire",
+"Bierlich:2022pfr": "inspire",
+"CMS:2019pkt": "inspire",
+"CMS:2020cmk": "inspire",
+"Zabi:2020gjd": "inspire",
+"ATLAS:2017xuc": "inspire",
+"ATLAS:2022akr": "inspire",
+"CMS:2021sdq": "inspire",
+"Altakach:2022ywa": "inspire",
+"Ehataht:2023zzt": "inspire",
+"ATLAS:2011ohj": "inspire",
+"CMS:2011ltz": "inspire",
+"ATLAS:2011pse": "inspire",
+"CMS:2014wdm": "pdf+inspire",
+"ATLAS:2015xst": "inspire",
+"ATLAS:2016neq": "inspire",
+"CMS:2017zyp": "pdf+inspire",
+"ATLAS:2018ynr": "inspire",
+"CMS:2018rmh": "inspire",
+"ATLAS:2020zms": "inspire",
+"ATLAS:2018gfm": "inspire",
+"ATLAS:2019gti": "inspire",
+"CMS:2021rsq": "inspire",
+"Qu:2019gqs": "pdf+inspire",
+"Qu:2022mxj": "pdf+inspire",
+"Bols:2020bkb": "inspire",
+"ATLAS:2025dkv": "pdf+inspire",
+"Duarte:2018ite": "inspire",
+"Abramowicz:2016zbo": "inspire",
+"Dam:2018rfz": "pdf+inspire",
+"Belle-II:2018jsg": "inspire",
+"Achasov:2023gey": "inspire",
+"ATLAS:2017tdaqTDR": "none",
+"ATLAS:2020hgtdTDR": "inspire",
+"ATLAS:2026jar": "inspire"
+},
+"missing": [
+{
+"recid": 593382,
+"count": 64,
+"title": "GEANT4 - A Simulation Toolkit",
+"texkey": "GEANT4:2002zbu",
+"year": "2002",
+"who": "GEANT4"
+},
+{
+"recid": 779080,
+"count": 57,
+"title": "The anti-$k_t$ jet clustering algorithm",
+"texkey": "Cacciari:2008gp",
+"year": "2008",
+"who": "Cacciari"
+},
+{
+"recid": 796888,
+"count": 48,
+"title": "The ATLAS Experiment at the CERN Large Hadron Collider",
+"texkey": "ATLAS:2008xda",
+"year": "2008",
+"who": "ATLAS"
+},
+{
+"recid": 955176,
+"count": 40,
+"title": "FastJet User Manual",
+"texkey": "Cacciari:2011ma",
+"year": "2011",
+"who": "Cacciari"
+},
+{
+"recid": 845712,
+"count": 40,
+"title": "A general framework for implementing NLO calculations in shower Monte Carlo programs: the POWHEG BOX",
+"texkey": "Alioli:2010xd",
+"year": "2010",
+"who": "Alioli"
+},
+{
+"recid": 760769,
+"count": 39,
+"title": "Matching NLO QCD computations with Parton Shower simulations: the POWHEG method",
+"texkey": "Frixione:2007vw",
+"year": "2007",
+"who": "Frixione"
+},
+{
+"recid": 659055,
+"count": 38,
+"title": "A New method for combining NLO QCD with shower Monte Carlo algorithms",
+"texkey": "Nason:2004rx",
+"year": "2004",
+"who": "Nason"
+},
+{
+"recid": 712925,
+"count": 36,
+"title": "PYTHIA 6.4 Physics and Manual",
+"texkey": "Sjostrand:2006za",
+"year": "2006",
+"who": "Sjostrand"
+},
+{
+"recid": 1293923,
+"count": 36,
+"title": "The automated computation of tree-level and next-to-leading order differential cross sections, and their matching to parton shower simulations",
+"texkey": "Alwall:2014hca",
+"year": "2014",
+"who": "Alwall"
+},
+{
+"recid": 1321709,
+"count": 34,
+"title": "An introduction to PYTHIA 8.2",
+"texkey": "Sjostrand:2014zea",
+"year": "2014",
+"who": "Sjöstrand"
+},
+{
+"recid": 796887,
+"count": 33,
+"title": "The CMS Experiment at the CERN LHC",
+"texkey": "CMS:2008xjf",
+"year": "2008",
+"who": "CMS"
+},
+{
+"recid": 764903,
+"count": 32,
+"title": "A Brief Introduction to PYTHIA 8.1",
+"texkey": "Sjostrand:2007gs",
+"year": "2007",
+"who": "Sjostrand"
+},
+{
+"recid": 560129,
+"count": 27,
+"title": "The EvtGen particle decay simulation package",
+"texkey": "Lange:2001uf",
+"year": "2001",
+"who": "Lange"
+},
+{
+"recid": 856179,
+"count": 26,
+"title": "The ATLAS Simulation Infrastructure",
+"texkey": "ATLAS:2010arf",
+"year": "2010",
+"who": "ATLAS"
+},
+{
+"recid": 1124337,
+"count": 26,
+"title": "Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC",
+"texkey": "ATLAS:2012yve",
+"year": "2012",
+"who": "ATLAS"
+},
+{
+"recid": 1124338,
+"count": 25,
+"title": "Observation of a New Boson at a Mass of 125 GeV with the CMS Experiment at the LHC",
+"texkey": "CMS:2012qbp",
+"year": "2012",
+"who": "CMS"
+},
+{
+"recid": 1325552,
+"count": 24,
+"title": "Parton distributions for the LHC Run II",
+"texkey": "NNPDF:2014otw",
+"year": "2014",
+"who": "NNPDF"
+},
+{
+"recid": 581996,
+"count": 20,
+"title": "New generation of parton distributions with uncertainties from global QCD analysis",
+"texkey": "Pumplin:2002vw",
+"year": "2002",
+"who": "Pumplin"
+},
+{
+"recid": 1605397,
+"count": 19,
+"title": "Particle-flow reconstruction and global event description with the CMS detector",
+"texkey": "CMS:2017yfk",
+"year": "2017",
+"who": "CMS"
+},
+{
+"recid": 746087,
+"count": 16,
+"title": "TMVA - Toolkit for Multivariate Data Analysis",
+"texkey": "TMVA:2007ngy",
+"year": "2007",
+"who": "TMVA"
+},
+{
+"recid": 1082926,
+"count": 16,
+"title": "Top++: A Program for the Calculation of the Top-Pair Cross-Section at Hadron Colliders",
+"texkey": "Czakon:2011xx",
+"year": "2011",
+"who": "Czakon"
+},
+{
+"recid": 860907,
+"count": 16,
+"title": "Asymptotic formulae for likelihood-based tests of new physics",
+"texkey": "Cowan:2010js",
+"year": "2010",
+"who": "Cowan"
+},
+{
+"recid": 1426830,
+"count": 16,
+"title": "Topological cell clustering in the ATLAS calorimeters and its performance in LHC Run 1",
+"texkey": "ATLAS:2016krp",
+"year": "2016",
+"who": "ATLAS"
+},
+{
+"recid": 51188,
+"count": 16,
+"title": "A Model of Leptons",
+"texkey": "Weinberg:1967tq",
+"year": "1967",
+"who": "Weinberg"
+},
+{
+"recid": 363610,
+"count": 16,
+"title": "The Monte Carlo program KORALZ, version 4.0, for the lepton or quark pair production at LEP / SLC energies",
+"texkey": "Jadach:1993yv",
+"year": "1993",
+"who": "Jadach"
+},
+{
+"recid": 861245,
+"count": 15,
+"title": "New parton distributions for collider physics",
+"texkey": "Lai:2010vv",
+"year": "2010",
+"who": "Lai"
+},
+{
+"recid": 1500696,
+"count": 15,
+"title": "Performance of the ATLAS Trigger System in 2015",
+"texkey": "ATLAS:2016wtr",
+"year": "2016",
+"who": "ATLAS"
+},
+{
+"recid": 756360,
+"count": 15,
+"title": "A Positive-weight next-to-leading-order Monte Carlo for heavy flavour hadroproduction",
+"texkey": "Frixione:2007nw",
+"year": "2007",
+"who": "Frixione"
+},
+{
+"recid": 1485699,
+"count": 15,
+"title": "The CMS trigger system",
+"texkey": "CMS:2016ngn",
+"year": "2016",
+"who": "CMS"
+},
+{
+"recid": 796247,
+"count": 14,
+"title": "LHC Machine",
+"texkey": "Evans:2008zzb",
+"year": "2008",
+"who": "Evans"
+},
+{
+"recid": 1795399,
+"count": 14,
+"title": "ATLAS Pythia 8 tunes to 7 TeV data",
+"texkey": "TheATLAScollaboration:2014rfk",
+"year": "2014",
+"who": ""
+},
+{
+"recid": 296534,
+"count": 14,
+"title": "Tau decays to pions",
+"texkey": "Kuhn:1990ad",
+"year": "1990",
+"who": "Kuhn"
+},
+{
+"recid": 589478,
+"count": 13,
+"title": "ALPGEN, a generator for hard multiparton processes in hadronic collisions",
+"texkey": "Mangano:2002ea",
+"year": "2002",
+"who": "Mangano"
+},
+{
+"recid": 1123387,
+"count": 13,
+"title": "QCD matrix elements + parton showers: The NLO case",
+"texkey": "Hoeche:2012yf",
+"year": "2012",
+"who": "Hoeche"
+},
+{
+"recid": 760143,
+"count": 13,
+"title": "A Parton shower algorithm based on Catani-Seymour dipole factorisation",
+"texkey": "Schumann:2007mg",
+"year": "2007",
+"who": "Schumann"
+},
+{
+"recid": 1121392,
+"count": 13,
+"title": "Parton distributions with LHC data",
+"texkey": "Ball:2012cx",
+"year": "2012",
+"who": "Ball"
+},
+{
+"recid": 1343791,
+"count": 13,
+"title": "Performance of Electron Reconstruction and Selection with the CMS Detector in Proton-Proton Collisions at √s = 8  TeV",
+"texkey": "CMS:2015xaf",
+"year": "2015",
+"who": "CMS"
+},
+{
+"recid": 725573,
+"count": 13,
+"title": "Electroweak gauge boson production at hadron colliders through $O(\\alpha_s^2)$",
+"texkey": "Melnikov:2006kv",
+"year": "2006",
+"who": "Melnikov"
+},
+{
+"recid": 1298029,
+"count": 13,
+"title": "Description and Performance of Track and Primary-Vertex Reconstruction with the CMS Tracker",
+"texkey": "CMS:2014pgm",
+"year": "2014",
+"who": "CMS"
+},
+{
+"recid": 4328,
+"count": 13,
+"title": "Partial Symmetries of Weak Interactions",
+"texkey": "Glashow:1961tr",
+"year": "1961",
+"who": "Glashow"
+}
+],
+"generated": "2026-11-17"
+}

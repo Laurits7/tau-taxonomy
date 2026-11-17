@@ -15,6 +15,8 @@
   --c-bin: #f1e9fb; --c-bin-ink: #6a3aa8;
   --c-read: #e3f4e8; --c-read-ink: #1f7a3e;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6; --s8: #e34948;
+  --edge: #aeb3ba; --cites: #1d1f23; --citedby: #b5481e; --lane: #f1f1ee;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -26,6 +28,8 @@
     --c-type: #2a2d33; --c-type-ink: #b6b9c0;
     --c-bin: #33264a; --c-bin-ink: #cdb2f2;
     --c-read: #1d3a27; --c-read-ink: #86d9a0;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #0ca30c; --s7: #9085e9; --s8: #e66767;
+    --edge: #4d535b; --cites: #e6e6e3; --citedby: #f08a5d; --lane: #191b1f;
   }
 }
 :root[data-theme="dark"] {
@@ -37,6 +41,8 @@
   --c-type: #2a2d33; --c-type-ink: #b6b9c0;
   --c-bin: #33264a; --c-bin-ink: #cdb2f2;
   --c-read: #1d3a27; --c-read-ink: #86d9a0;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #0ca30c; --s7: #9085e9; --s8: #e66767;
+  --edge: #4d535b; --cites: #e6e6e3; --citedby: #f08a5d; --lane: #191b1f;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
@@ -134,6 +140,54 @@ pre.raw { font-family: var(--mono); font-size: 11.5px; background: var(--panel);
 .toast.show { opacity: 1; }
 .menu-btn { display: none; }
 
+/* ---- tabs + citation graph ---- */
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+.tabs button { border: 0; background: none; padding: 7px 14px; cursor: pointer; color: var(--muted); font-weight: 550; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs button.on { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs button:focus-visible, .gnode:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.gview[hidden], .lview[hidden] { display: none !important; }
+.glegend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--muted); margin-bottom: 10px; align-items: center; }
+.glegend span { display: inline-flex; gap: 5px; align-items: center; }
+.glegend b { color: var(--ink); font-weight: 600; margin-right: 2px; }
+.gstage { position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow-x: auto; }
+.gstage svg { display: block; max-width: none; }
+.glane { fill: var(--lane); }
+.glane-l { font-size: 12px; font-weight: 600; fill: var(--ink); }
+.glane-n { font-size: 11px; fill: var(--muted); }
+.gaxis { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+.ggrid { stroke: var(--line); stroke-dasharray: 2 3; }
+.gedge { fill: none; stroke: var(--edge); stroke-width: 1; opacity: .32; }
+.gedge.out { stroke: var(--cites); stroke-width: 1.8; opacity: 1; }
+.gedge.in { stroke: var(--citedby); stroke-width: 1.8; opacity: 1; stroke-dasharray: 5 3; }
+.gedge.dim { opacity: .04; }
+.gnode { cursor: pointer; }
+.gnode path { stroke: var(--panel); stroke-width: 1.5; }
+.gnode.noref path { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 2 1.5; }
+.gnode text { font-size: 10.5px; fill: var(--muted); pointer-events: none; paint-order: stroke; stroke: var(--panel); stroke-width: 3px; stroke-linejoin: round; }
+.gnode.dim { opacity: .13; }
+.gnode.sel text { fill: var(--ink); font-weight: 650; }
+.gnode.isread text { font-style: italic; }
+.gtip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--line); box-shadow: 0 6px 22px rgba(0,0,0,.15); border-radius: 6px; padding: 9px 11px; max-width: 360px; font-size: 12.5px; line-height: 1.4; z-index: 4; }
+.gtip .tt { font-weight: 600; }
+.gtip .mm { color: var(--muted); margin-top: 3px; }
+.gdetail { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin-top: 14px; }
+.gdetail > div { min-width: 0; }
+.gdetail h3 { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
+.gdetail h2 { font-size: 15px; margin: 0 0 4px; }
+.gdetail ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 3px; }
+.gdetail li { display: flex; gap: 6px; align-items: baseline; font-size: 12.5px; }
+.gdetail li button { all: unset; cursor: pointer; }
+.gdetail li button:hover { text-decoration: underline; }
+.gdetail .yr { font-weight: 600; font-variant-numeric: tabular-nums; flex: none; }
+.src { font-size: 10px; padding: 0 5px; border-radius: 8px; background: var(--c-type); color: var(--c-type-ink); white-space: nowrap; flex: none; }
+.gmissing { margin-top: 14px; }
+.gmissing summary { cursor: pointer; font-weight: 600; }
+.gmissing table { border-collapse: collapse; width: 100%; font-size: 12.5px; margin-top: 8px; }
+.gmissing th, .gmissing td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.gmissing th { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.gmissing td.n { text-align: right; font-variant-numeric: tabular-nums; }
+.gnote { font-size: 12px; color: var(--muted); margin-top: 10px; max-width: 100ch; }
+
 @media (max-width: 820px) {
   .layout { grid-template-columns: 1fr; }
   aside { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); display: none; }
@@ -152,6 +206,11 @@ pre.raw { font-family: var(--mono); font-size: 11.5px; background: var(--panel);
     <div id="facets"></div>
   </aside>
   <main>
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-list" data-view="list">Papers</button>
+      <button role="tab" id="tab-graph" data-view="graph">Citation graph</button>
+    </div>
+    <div class="lview" id="lview">
     <div class="toolbar">
       <button class="btn menu-btn" id="menu">Filters</button>
       <span class="count" id="count"></span>
@@ -177,6 +236,27 @@ pre.raw { font-family: var(--mono); font-size: 11.5px; background: var(--panel);
     <div class="banner" id="banner">Read-only copy: start the viewer with <code>./tau_taxonomy</code> to tick papers as read and edit bins.</div>
     <div class="active-filters" id="active"></div>
     <div id="list"></div>
+    </div>
+    <div class="gview" id="gview" hidden>
+      <div class="toolbar">
+        <button class="btn menu-btn" id="menu2">Filters</button>
+        <span class="count" id="gcount"></span>
+        <label>Lanes <select id="glane">
+          <option value="facility">Facility</option><option value="area">Topic area</option>
+          <option value="coll">Collision type</option><option value="doctype">Document type</option>
+        </select></label>
+        <label>Colour <select id="gcolor">
+          <option value="area">Topic area</option><option value="facility">Facility</option>
+          <option value="coll">Collision type</option>
+        </select></label>
+        <label class="check"><input type="checkbox" id="glabels"> Labels</label>
+      </div>
+      <div class="glegend" id="glegend"></div>
+      <div class="gstage" id="gstage"><svg id="gsvg" role="img" aria-label="Citation timeline"></svg><div class="gtip" id="gtip" hidden></div></div>
+      <div class="gdetail" id="gdetail"></div>
+      <details class="gmissing" id="gmissing"></details>
+      <p class="gnote" id="gnote"></p>
+    </div>
   </main>
 </div>
 <div class="selbar" id="selbar">
@@ -306,7 +386,8 @@ const GROUPS = {
 const yrs = P.map(p => p.year).filter(Boolean);
 const YMIN = Math.min(...yrs), YMAX = Math.max(...yrs);
 const DEFAULT = { q: "", sel: { exp: [], coll: [], topic: [], doctype: [], status: [], bin: [] }, topicMode: "any",
-                  y0: YMIN, y1: YMAX, g1: "facility", g2: "topic", g3: "none", sort: "year-desc", open: [], merge: true };
+                  y0: YMIN, y1: YMAX, g1: "facility", g2: "topic", g3: "none", sort: "year-desc", open: [], merge: true,
+                  view: "list", glane: "facility", gcolor: "area", glabels: true };
 let S = loadState();
 const openRaw = new Set();
 
@@ -593,6 +674,8 @@ function render() {
     ` · ${nRead} read`;
   renderActive();
   renderSelbar();
+  showView();
+  if (S.view === "graph") { renderGraph(); return; }
   if (!current.length) { list.innerHTML = `<div class="empty">No papers match these filters.</div>`; return; }
   const dims = [S.g1, S.g2, S.g3].filter(d => d !== "none");
   const groups = groupBy(shown, dims);
@@ -669,6 +752,263 @@ document.getElementById("selread").onclick = () => { setRead([...SEL], true); SE
 document.getElementById("selunread").onclick = () => { setRead([...SEL], false); SEL.clear(); update(); };
 document.getElementById("selclear").onclick = () => { SEL.clear(); render(); };
 document.getElementById("menu").onclick = () => document.getElementById("side").classList.toggle("open");
+
+// ---------------- citation graph tab ----------------
+const CITES = DATA.cites;
+const SVGNS = "http://www.w3.org/2000/svg";
+function svgEl(tag, attrs, parent) {
+  const e = document.createElementNS(SVGNS, tag);
+  for (const [k, v] of Object.entries(attrs || {})) e.setAttribute(k, v);
+  if (parent) parent.append(e);
+  return e;
+}
+function showView() {
+  document.getElementById("lview").hidden = S.view === "graph";
+  document.getElementById("gview").hidden = S.view !== "graph";
+  for (const b of document.querySelectorAll(".tabs button")) {
+    b.classList.toggle("on", b.dataset.view === S.view);
+    b.setAttribute("aria-selected", b.dataset.view === S.view);
+  }
+}
+// symbols: equal-area shapes keyed by document type
+function shape(kind, area) {
+  const r = Math.sqrt(area / Math.PI);
+  switch (kind) {
+    case 1: { const a = Math.sqrt(area) / 2; return `M${-a},${-a}h${2*a}v${2*a}h${-2*a}z`; }
+    case 2: { const a = Math.sqrt(area / 2); return `M0,${-a}L${a},0L0,${a}L${-a},0z`; }
+    case 3: { const a = Math.sqrt(area * 4 / Math.sqrt(3)) / 2, h = a * Math.sqrt(3); return `M0,${-h*2/3}L${a},${h/3}L${-a},${h/3}z`; }
+    case 4: { const a = Math.sqrt(area * 4 / Math.sqrt(3)) / 2, h = a * Math.sqrt(3); return `M0,${h*2/3}L${a},${-h/3}L${-a},${-h/3}z`; }
+    case 5: { let d = ""; const R = r * 1.45, ri = R * .45; for (let i = 0; i < 10; i++) { const ang = -Math.PI/2 + i*Math.PI/5, rr = i % 2 ? ri : R; d += (i ? "L" : "M") + (rr*Math.cos(ang)).toFixed(2) + "," + (rr*Math.sin(ang)).toFixed(2); } return d + "z"; }
+    case 6: { const a = r * .5, b = r * 1.25; return `M${-a},${-b}h${2*a}v${b-a}h${b-a}v${2*a}h${a-b}v${b-a}h${-2*a}v${a-b}h${a-b}v${-2*a}h${b-a}z`; }
+    default: return `M${r},0A${r},${r} 0 1,1 ${-r},0A${r},${r} 0 1,1 ${r},0z`;
+  }
+}
+const SHAPE_OF = { "Journal article": 0, "Journal (review)": 1, "Preprint": 2, "Technical design report": 5,
+                   "Public note (CONF / PUB / PAS / DP)": 3, "Proceedings / talk": 6 };
+const shapeOf = p => SHAPE_OF[p.doctype] ?? 4;
+const primary = {
+  facility: p => p.exp.length ? facOf(p.exp[0]) : "Unclassified",
+  area: p => p.topics.length ? topicGroup(p.topics[0]) : "Unclassified",
+  coll: p => p.coll ? collLabel(p.coll) : "Unclassified",
+  doctype: p => p.doctype,
+};
+const orderOf = {
+  facility: [...M.facilityOrder, "Unclassified"],
+  area: [...M.topicGroupOrder, "Unclassified"],
+  coll: [...Object.values(M.collisions), "Unclassified"],
+  doctype: DOCTYPES,
+};
+const GLINKS = [], OUT = {}, IN = {};
+if (CITES) {
+  for (const [a, b, how, ins] of CITES.edges) {
+    if (!BYKEY[a] || !BYKEY[b]) continue;
+    const e = { s: a, t: b, how, ins };
+    GLINKS.push(e);
+    (OUT[a] = OUT[a] || []).push(e); (IN[b] = IN[b] || []).push(e);
+  }
+}
+const indeg = k => (IN[k] || []).length;
+const srcLabel = e => e.how && e.ins ? "PDF + INSPIRE" : e.how ? "PDF: " + e.how : "INSPIRE";
+let gSel = null, gPos = {};
+
+function colorScale(dim) {
+  const vals = orderOf[dim].filter(v => v !== "Unclassified");
+  const m = {}; vals.forEach((v, i) => m[v] = i < 8 ? `var(--s${i + 1})` : "var(--muted)");
+  m["Unclassified"] = "var(--muted)";
+  return v => m[v] || "var(--muted)";
+}
+
+function renderGraph() {
+  const svg = document.getElementById("gsvg");
+  svg.innerHTML = "";
+  const tip = document.getElementById("gtip");
+  if (!CITES) {
+    document.getElementById("gcount").textContent = "No citation data";
+    document.getElementById("glegend").innerHTML = "Run <code>python3 citegraph.py</code> in the project folder to create citations.json, then reload.";
+    return;
+  }
+  document.getElementById("glane").value = S.glane;
+  document.getElementById("gcolor").value = S.gcolor;
+  document.getElementById("glabels").checked = S.glabels;
+  const nodes = current.filter(p => p.year);
+  const vis = new Set(nodes.map(p => p.key));
+  const links = GLINKS.filter(e => vis.has(e.s) && vis.has(e.t));
+  if (gSel && !vis.has(gSel)) gSel = null;
+  document.getElementById("gcount").textContent = `${nodes.length} papers · ${links.length} citation links`;
+  const col = colorScale(S.gcolor);
+
+  // legend
+  const lg = document.getElementById("glegend"); lg.innerHTML = "";
+  const colVals = orderOf[S.gcolor].filter(v => nodes.some(p => primary[S.gcolor](p) === v));
+  const leg = (label, items) => { const b = el("span"); b.innerHTML = `<b>${label}</b>`; lg.append(b); items.forEach(i => lg.append(i)); };
+  const sw = (d, fill, text) => { const sp = el("span"); sp.innerHTML = `<svg width="14" height="14"><path transform="translate(7,7)" d="${d}" fill="${fill}"/></svg>`; sp.append(text); return sp; };
+  leg("Colour:", colVals.map(v => sw(shape(0, 70), col(v), v)));
+  const sep = el("span"); sep.style.width = "100%"; sep.style.height = "0"; lg.append(sep);
+  const shapeVals = DOCTYPES.filter(v => nodes.some(p => p.doctype === v));
+  leg("Shape:", shapeVals.map(v => sw(shape(SHAPE_OF[v] ?? 4, 70), "var(--muted)", v.replace(" (CONF / PUB / PAS / DP)", ""))));
+  const sep2 = el("span"); sep2.style.width = "100%"; sep2.style.height = "0"; lg.append(sep2);
+  const k1 = el("span"); k1.innerHTML = `<svg width="30" height="8"><line x1="0" y1="4" x2="30" y2="4" stroke="var(--cites)" stroke-width="2"/></svg>cites`;
+  const k2 = el("span"); k2.innerHTML = `<svg width="30" height="8"><line x1="0" y1="4" x2="30" y2="4" stroke="var(--citedby)" stroke-width="2" stroke-dasharray="5 3"/></svg>cited by`;
+  const k3 = el("span"); k3.innerHTML = `<svg width="12" height="12"><circle cx="6" cy="6" r="4.5" fill="var(--muted)" stroke="var(--ink)" stroke-dasharray="2 1.5"/></svg>no reference list available`;
+  const k4 = el("span"); k4.textContent = "Size = times cited within the collection";
+  leg("Links:", [k1, k2, k3, k4]);
+
+  // layout
+  const W = Math.max(1000, document.getElementById("gstage").clientWidth - 2), ML = 180, MR = 30, MT = 30, MB = 28, ROW = S.glabels ? 17 : 13, PAD = 10;
+  const yrsV = nodes.map(p => p.year);
+  const y0 = Math.min(...yrsV), y1 = Math.max(...yrsV);
+  const lo = y0, x = (() => {
+    const dom = y0 < 1990 ? [y0 - 1, 1990, 2005, y1 + 1] : y0 < 2003 ? [y0 - 1, 2005, y1 + 1] : [y0 - 1, y1 + 1];
+    const rng = y0 < 1990 ? [0, .12, .27, 1] : y0 < 2003 ? [0, .22, 1] : [0, 1];
+    return y => { let i = 0; while (i < dom.length - 2 && y > dom[i + 1]) i++;
+      const f = (y - dom[i]) / (dom[i + 1] - dom[i]); return ML + (W - ML - MR) * (rng[i] + f * (rng[i + 1] - rng[i])); };
+  })();
+  const size = p => 34 + indeg(p.key) * 14;
+  const rad = p => Math.sqrt(size(p) / Math.PI) * 1.15 + 1;
+  const lanesV = orderOf[S.glane].filter(v => nodes.some(p => primary[S.glane](p) === v));
+  let yy = MT; const lanes = [];
+  for (const lv of lanesV) {
+    const arr = nodes.filter(p => primary[S.glane](p) === lv).sort((a, b) => a.year - b.year || indeg(b.key) - indeg(a.key));
+    const ends = [];
+    for (const p of arr) {
+      const px = x(p.year) + ((p.key.length * 7) % 9 - 4);
+      const w = S.glabels ? p.authors.split(" ")[0].length * 6 + 40 : 4;
+      const left = px - rad(p) - 3, right = px + rad(p) + 4 + w;
+      let r = ends.findIndex(e => e < left); if (r < 0) { r = ends.length; ends.push(0); }
+      ends[r] = right; gPos[p.key] = { x: px, row: r };
+    }
+    const n = Math.max(ends.length, 1), h = Math.max(n * ROW + PAD * 2, 44);
+    for (const p of arr) gPos[p.key].y = yy + h / 2 - (n - 1) * ROW / 2 + gPos[p.key].row * ROW;
+    lanes.push({ lv, y: yy, h, n: arr.length });
+    yy += h + 3;
+  }
+  const H = yy + MB;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const defs = svgEl("defs", {}, svg);
+  for (const [id, c] of [["ga", "var(--edge)"], ["go", "var(--cites)"], ["gi", "var(--citedby)"]]) {
+    const m = svgEl("marker", { id, viewBox: "0 0 10 10", refX: 9, refY: 5, markerWidth: 5, markerHeight: 5, orient: "auto" }, defs);
+    svgEl("path", { d: "M0,1L9,5L0,9z", fill: c }, m);
+  }
+  for (const l of lanes) {
+    svgEl("rect", { class: "glane", x: 0, y: l.y, width: W, height: l.h }, svg);
+    const t = svgEl("text", { class: "glane-l", x: 12, y: l.y + l.h / 2 - 2 }, svg); t.textContent = l.lv.replace(" (CONF / PUB / PAS / DP)", "");
+    const t2 = svgEl("text", { class: "glane-n", x: 12, y: l.y + l.h / 2 + 12 }, svg); t2.textContent = l.n + " papers";
+  }
+  const ticks = []; const step = y1 - y0 < 12 ? 1 : 5; for (let t = Math.ceil(lo / step) * step; t <= y1; t += step) if (t >= 2005 || t % 10 === 0) ticks.push(t);
+  for (const t of ticks) {
+    svgEl("line", { class: "ggrid", x1: x(t), x2: x(t), y1: MT, y2: H - MB }, svg);
+    for (const ty of [MT - 10, H - MB + 17]) { const tx = svgEl("text", { class: "gaxis", x: x(t), y: ty, "text-anchor": "middle" }, svg); tx.textContent = t; }
+  }
+  const eG = svgEl("g", {}, svg), nG = svgEl("g", {}, svg);
+  const ePaths = links.map(e => {
+    const s = gPos[e.s], t = gPos[e.t], dx = t.x - s.x, dy = t.y - s.y, dist = Math.hypot(dx, dy) || 1, rt = rad(BYKEY[e.t]) + 1;
+    const tx = t.x - dx / dist * rt, ty = t.y - dy / dist * rt, bend = Math.min(70, dist * .22);
+    const mx = (s.x + tx) / 2 - dy / dist * bend, my = (s.y + ty) / 2 + dx / dist * bend;
+    const path = svgEl("path", { class: "gedge", d: `M${s.x},${s.y}Q${mx},${my} ${tx},${ty}`, "marker-end": "url(#ga)" }, eG);
+    path._e = e; return path;
+  });
+  const nEls = nodes.map(p => {
+    const g = svgEl("g", { class: "gnode" + (CITES.coverage[p.key] === "none" || !CITES.coverage[p.key] ? " noref" : "") + (READ.has(p.key) ? " isread" : ""),
+                           transform: `translate(${gPos[p.key].x},${gPos[p.key].y})`, tabindex: 0, role: "button",
+                           "aria-label": `${p.authors} ${p.year}: ${p.title}` }, nG);
+    svgEl("path", { d: shape(shapeOf(p), size(p)), fill: col(primary[S.gcolor](p)) }, g);
+    if (S.glabels) { const t = svgEl("text", { x: rad(p) + 3, dy: "0.35em" }, g); t.textContent = shortLabel(p); }
+    g._p = p;
+    g.addEventListener("mouseenter", ev => { if (!gSel) focusG(p.key); showTip(ev, p); });
+    g.addEventListener("mousemove", ev => showTip(ev, p));
+    g.addEventListener("mouseleave", () => { tip.hidden = true; if (!gSel) focusG(null); });
+    g.addEventListener("click", ev => { ev.stopPropagation(); selectG(gSel === p.key ? null : p.key); });
+    g.addEventListener("keydown", ev => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); selectG(gSel === p.key ? null : p.key); } });
+    return g;
+  });
+  svg.onclick = () => selectG(null);
+  function showTip(ev, p) {
+    const st = document.getElementById("gstage"), r = st.getBoundingClientRect();
+    const no = (OUT[p.key] || []).filter(e => vis.has(e.t)).length, ni = (IN[p.key] || []).filter(e => vis.has(e.s)).length;
+    const cov = { "pdf+inspire": "PDF + INSPIRE", pdf: "PDF only", inspire: "INSPIRE only", none: "none" }[CITES.coverage[p.key]] || "none";
+    tip.innerHTML = `<div class="tt"></div><div class="mm"></div><div class="mm"></div>`;
+    tip.children[0].textContent = p.title;
+    tip.children[1].textContent = `${p.authors} · ${p.year} · ${p.doctype}`;
+    tip.children[2].textContent = `Cites ${no} · cited by ${ni} in this view · references from: ${cov}`;
+    tip.hidden = false;
+    let lx = ev.clientX - r.left + st.scrollLeft + 14; const ly = ev.clientY - r.top + 14;
+    if (lx + 370 > st.scrollLeft + st.clientWidth) lx -= 390;
+    tip.style.left = lx + "px"; tip.style.top = ly + "px";
+  }
+  function focusG(k) {
+    const nb = new Set(k ? [k, ...(OUT[k] || []).map(e => e.t), ...(IN[k] || []).map(e => e.s)] : []);
+    nEls.forEach(g => { g.classList.toggle("dim", !!k && !nb.has(g._p.key)); g.classList.toggle("sel", g._p.key === k); });
+    ePaths.forEach(pth => {
+      const e = pth._e, cls = !k ? "gedge" : e.s === k ? "gedge out" : e.t === k ? "gedge in" : "gedge dim";
+      pth.setAttribute("class", cls);
+      pth.setAttribute("marker-end", cls === "gedge out" ? "url(#go)" : cls === "gedge in" ? "url(#gi)" : "url(#ga)");
+      if (k && (e.s === k || e.t === k)) eG.append(pth);
+    });
+  }
+  function selectG(k) { gSel = k; focusG(k); renderGDetail(vis); }
+  renderGraph.select = selectG;
+  focusG(gSel); renderGDetail(vis); renderMissing();
+  document.getElementById("gnote").textContent =
+    `Links come from two sources: the PDFs attached in the local Zotero library (searched for each paper's arXiv ID, DOI, report number, ` +
+    `journal reference or full title) and INSPIRE-HEP reference lists. ${GLINKS.filter(e => e.how && e.ins).length} links are found by both, ` +
+    `${GLINKS.filter(e => e.how && !e.ins).length} only in the PDFs (mostly CONF/PAS/DP notes INSPIRE does not link) and ` +
+    `${GLINKS.filter(e => !e.how).length} only in INSPIRE (mostly papers without a PDF in Zotero). Generated ${CITES.generated}; ` +
+    `rerun citegraph.py after adding papers. Lanes and colours use each paper's first experiment / topic. The sidebar filters apply here too.`;
+}
+function shortLabel(p) {
+  const a = p.authors.replace(/ Collaborations?$/, "").replace(/ et al\.$/, "").split(/, | & /)[0];
+  return `${a.length > 16 ? a.slice(0, 15) + "…" : a} ${p.year}`;
+}
+function renderGDetail(vis) {
+  const d = document.getElementById("gdetail");
+  d.innerHTML = "";
+  if (!gSel) { const x = el("div"); x.innerHTML = `<h3>Selection</h3><p style="color:var(--muted);margin:0">Click a paper to list what it cites and what cites it. Hover to preview.</p>`; d.append(x); return; }
+  const p = BYKEY[gSel];
+  const a = el("div");
+  a.innerHTML = `<h3></h3><h2></h2><div style="color:var(--muted);font-size:12.5px"></div>`;
+  a.children[0].textContent = (p.exp.map(expLabel).join(", ") || "Unclassified") + " · " + p.doctype;
+  a.children[1].append(titleLink(p));
+  a.children[2].textContent = `${p.authors} · ${p.year}${p.venue ? " · " + p.venue : ""} · ${p.key}`;
+  d.append(a);
+  const list = (title, es, other) => {
+    const box = el("div"); const h = el("h3"); h.textContent = `${title} (${es.length})`; box.append(h);
+    if (!es.length) { const n = el("p"); n.style.cssText = "color:var(--muted);margin:0"; n.textContent = "None in the collection."; box.append(n); return box; }
+    const ul = el("ul");
+    es.map(e => [e, BYKEY[e[other]]]).sort((x, y) => x[1].year - y[1].year).forEach(([e, q]) => {
+      const li = el("li"), yr = el("span", "yr"), b = el("button"), src = el("span", "src");
+      yr.textContent = q.year; b.textContent = `${shortLabel(q)}: ${q.title}`; src.textContent = srcLabel(e);
+      if (!vis.has(q.key)) b.style.opacity = .55;
+      b.onclick = () => vis.has(q.key) ? renderGraph.select(q.key) : (gSel = q.key, renderGDetail(vis));
+      li.append(yr, b, src); ul.append(li);
+    });
+    box.append(ul); return box;
+  };
+  d.append(list("Cites", OUT[gSel] || [], "t"), list("Cited by", IN[gSel] || [], "s"));
+}
+function renderMissing() {
+  const box = document.getElementById("gmissing");
+  if (box.dataset.done) return;
+  box.dataset.done = 1;
+  const ms = CITES.missing || [];
+  box.innerHTML = `<summary>Cited most often by the collection but not in it (${ms.length})</summary>
+    <table><thead><tr><th>Cited by</th><th>Year</th><th>Paper</th><th>INSPIRE key</th></tr></thead><tbody></tbody></table>`;
+  const tb = box.querySelector("tbody");
+  for (const m of ms) {
+    const tr = el("tr");
+    tr.innerHTML = `<td class="n"></td><td></td><td></td><td><code></code></td>`;
+    tr.children[0].textContent = m.count; tr.children[1].textContent = m.year;
+    const a = document.createElement("a"); a.href = "https://inspirehep.net/literature/" + m.recid; a.target = "_blank"; a.rel = "noopener";
+    a.textContent = m.title; tr.children[2].append(a, document.createTextNode(m.who ? " · " + m.who : ""));
+    tr.children[3].firstChild.textContent = m.texkey;
+    tb.append(tr);
+  }
+}
+for (const b of document.querySelectorAll(".tabs button")) b.onclick = () => { S.view = b.dataset.view; update(); };
+document.getElementById("glane").onchange = e => { S.glane = e.target.value; update(); };
+document.getElementById("gcolor").onchange = e => { S.gcolor = e.target.value; update(); };
+document.getElementById("glabels").onchange = e => { S.glabels = e.target.checked; update(); };
+let gResize; addEventListener("resize", () => { clearTimeout(gResize); gResize = setTimeout(() => { if (S.view === "graph") renderGraph(); }, 150); });
+document.getElementById("menu2").onclick = () => document.getElementById("side").classList.toggle("open");
 
 update();
 </script>

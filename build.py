@@ -297,8 +297,17 @@ def make_html(bib, classification, read_path, bins_path):
         "topicGroupOrder": TOPIC_GROUP_ORDER,
         "source": Path(bib).name,
     }
+    cites_path = Path(bib).with_name("citations.json")
+    cites = json.loads(cites_path.read_text()) if cites_path.exists() else None
+    if cites:
+        stale = sorted({k for e in cites["edges"] for k in e[:2]} - keys)
+        if stale:
+            warnings.append(f"citations.json has keys not in bib (re-run citegraph.py): {', '.join(stale[:10])}")
+        unknown = sorted(keys - set(cites["coverage"]))
+        if unknown:
+            warnings.append(f"{len(unknown)} entries not in citations.json yet (re-run citegraph.py)")
     data = json.dumps({"meta": meta, "papers": build_records(entries, cls),
-                       "read": read_read(read_path), "bins": bins}, ensure_ascii=False)
+                       "read": read_read(read_path), "bins": bins, "cites": cites}, ensure_ascii=False)
     data = data.replace("</", "<\\/")
     html = (HERE / "template.html").read_text().replace("/*__DATA__*/null", data)
     return html, entries, cls, warnings

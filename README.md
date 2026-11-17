@@ -90,6 +90,33 @@ The pre-filled bins are my reading of the bibliography: notes starting with
 superseded by the paper); notes starting with **"guess"** are likely but unverified
 and worth checking.
 
+## Citation graph tab
+
+The **Citation graph** tab (top of the page) shows which papers in the collection cite each other,
+as a timeline: year left to right, one lane per facility (or topic area, collision type,
+document type), colour by topic area (or facility, collision type), marker shape by document
+type, marker size by how often the paper is cited within the collection. Hover a paper to
+highlight its links, click it to list what it cites and what cites it (with the source of each
+link). The sidebar filters apply to the graph too. Below the graph is a list of the papers the
+collection cites most often that are not in it yet.
+
+The links are stored in `citations.json`, made by
+
+```bash
+python3 citegraph.py          # needs pdftotext (poppler) and internet access
+```
+
+It combines two sources:
+
+- **Full text**: each entry is matched to its item in the local Zotero library (`~/Zotero`,
+  read-only), the attached PDFs are converted with `pdftotext`, and the text is searched for every
+  other entry's arXiv ID, DOI, report number, journal reference or full title.
+- **INSPIRE-HEP** reference lists.
+
+PDF-only links are mostly CONF / PAS / DP notes that INSPIRE does not link; INSPIRE-only
+links mostly come from entries without a PDF in Zotero. Responses and extracted text are cached
+in `.citecache/`; use `--refresh` to re-query INSPIRE. Re-run it after adding papers.
+
 ## Editing the categories
 
 All classification lives in `classification.txt`, one line per paper:
@@ -145,12 +172,11 @@ frequently used views.
 | `bibparse.py` | Minimal BibTeX parser and TeX → Unicode title cleaning |
 | `tau_reco_merged.bib` | Source bibliography |
 | `tau_reco_zotero.bib` | Generated `.bib` with taxonomy tags, for Zotero import |
+| `citegraph.py` | Finds citation links (Zotero PDFs + INSPIRE) and writes `citations.json` |
+| `citations.json` | Citation links for the graph tab (generated; safe to commit) |
 
 ## Possible extensions
 
 - Create a nested collection tree in a Zotero library via the Zotero web API
   (needs an API key), or build the viewer directly from a Zotero library.
-- Connected-Papers-style graph view: fetch references/citations from INSPIRE-HEP
-  (all entries carry an arXiv ID, DOI or CDS link), link papers by shared
-  references / co-citation, colour by category, and suggest frequently cited
-  papers missing from the collection.
+- Co-citation / shared-reference view on top of the citation graph.
